@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville');
+
+.imgDiv{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    width: 100vw;
+}
+
+.imgHeliki{
+    max-width: 500px;
+}
+
+.pImgDiv{
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-family: 'libre baskerville'
+}
