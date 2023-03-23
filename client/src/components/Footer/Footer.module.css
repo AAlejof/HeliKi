@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville');
+
+.footerDiv{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    height: 10rem;;
+    width: 100vw;
+    background-color: #FFECEA;
+}
+
+.pFooterDiv{
+    font-family: 'libre baskerville';
+    font-style: italic ;
+    font-size: 1rem;
+    letter-spacing: 5px;
+    
+}

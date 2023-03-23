@@ -10,10 +10,16 @@
 
 .imgHeliki{
     max-width: 500px;
+    margin: 5rem;
 }
 
 .pImgDiv{
     writing-mode: vertical-rl;
     text-orientation: upright;
-    font-family: 'libre baskerville'
+    font-family: 'libre baskerville';
+    font-style: italic ;
+    letter-spacing: 25px;
+    color: #868686;
+    font-weight: 400;
+    
 }
