@@ -17,6 +17,7 @@ function App() {
   const { pathname } = location;
 
   const boolAddComponent =
+  pathname === '/'     ||
   pathname === '/home' ||
   pathname === '/tips' ||
   pathname === '/admin';
