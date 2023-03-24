@@ -1,7 +1,40 @@
-.pLandingDiv{
-    font-family: 'libre baskerville';
-    font-style: italic ;
-    font-size: 1.7rem;
-    letter-spacing: 20px;
-    
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
+@media (max-width: 450px) {
+	.landingDiv {
+		display: flex;
+		flex-direction: column;
+		height: 70vh;
+		justify-content: center;
+	}
+
+	.pLandingDiv {
+        margin: 39px;
+		font-family: 'Poppins';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 24px;
+		text-align: center;
+		letter-spacing: 0.5em;
+		text-transform: uppercase;
+		color: #4e4e4e;
+	}
+
+	a:link {
+		text-decoration: none;
+	}
+
+	a:visited {
+		text-decoration: none;
+		color: #4e4e4e;
+	}
+
+	a:hover {
+		text-decoration: none;
+	}
+
+	a:active {
+		text-decoration: none;
+	}
 }
