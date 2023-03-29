@@ -7,7 +7,7 @@ const Navbar = () => {
         <>
             <div className={style.navbarDiv}>
                 <p className={style.pNavbarDiv}>
-                    Helen & Kiki
+                <Link to='/'>Helen & Kiki</Link>
                 </p>
             </div>
         
