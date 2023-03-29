@@ -5,12 +5,15 @@
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
+    align-items: center;
     width: 100vw;
 }
 
 .imgHeliki{
-    max-width: 500px;
-    margin: 5rem;
+    height: auto;
+    width: 250px;
+    justify-content: center;
+    align-content: center;
 }
 
 .pImgDiv{
