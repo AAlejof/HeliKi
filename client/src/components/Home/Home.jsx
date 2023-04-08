@@ -5,7 +5,7 @@ const Home = () => {
     return(
         <>
         <div className={style.imgDiv}>
-            <p className={style.pImgDiv} >BUENOS AIRES</p>
+            <p className={style.pImgDiv} >BS.AS</p>
             <img className={style.imgHeliki} src={image} alt='heliki gif' />
             <p className={style.pImgDiv}>KÖLN</p>
         </div>
