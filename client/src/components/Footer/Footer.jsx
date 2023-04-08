@@ -7,7 +7,9 @@ const Footer = () => {
 		<>
 			<div className={style.footerDiv}>
 				<div>
-					<p className={style.pFooterDiv}>Wedding invitation</p>
+					<Link>
+						<p className={style.pFooterDiv}>Wedding invitation</p>
+					</Link>
 				</div>
 				<div>
 					<p className={style.pFooterDiv}>18.11.2023</p>
