@@ -15,6 +15,9 @@ const Footer = () => {
 					<p className={style.pFooterDiv}>18.11.2023</p>
 				</div>
 			</div>
+				<div className={style.devDiv}>
+					<p> <a href="https://github.com/AAlejof">Developed by Aalejof</a> </p>
+				</div>
 		</>
 	);
 };
