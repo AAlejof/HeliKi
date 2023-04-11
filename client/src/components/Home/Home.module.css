@@ -27,3 +27,12 @@
     font-weight: 400;
     
 }
+
+.pDownDiv{
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    margin: 0;
+    width: 50%;
+    color: #F19D9D;;
+       
+}
