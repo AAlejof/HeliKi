@@ -82,10 +82,10 @@
     margin-bottom: 15%;
 }
 
-.ceremonyDiv{
+.eventsDiv{
     margin: 10%;
 }
-.pCeremonyDiv {
+.pEventsDiv {
 	font-family: 'Poppins';
 	font-style: normal;
 	font-weight: 400;
@@ -112,4 +112,5 @@
     padding-left: 25px;
     padding-bottom: 14px;
     padding-right: 25px;
+	cursor: pointer;
 }
