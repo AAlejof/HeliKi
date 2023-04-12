@@ -80,11 +80,12 @@
 	border-bottom: 1px solid #f19d9d;
 	padding: 1rem;
     margin-bottom: 15%;
+	width: 100%;
 }
 
-.eventsDiv{
+/* .eventsDiv{
     margin: 10%;
-}
+} */
 .pEventsDiv {
 	font-family: 'Poppins';
 	font-style: normal;
