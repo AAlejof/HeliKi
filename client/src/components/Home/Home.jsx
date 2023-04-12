@@ -23,6 +23,11 @@ const Home = () => {
                 <br/>Heli & Kiki
             </p>
         </div>
+        <div className={style.ceremonyDiv}>
+            <h3 className={style.h3Div}>CEREMONIA</h3>
+            <p  className={style.pCeremonyDiv}>Sábado <br/> 18.11.2023 <br/><br/>19:00 h <br/><br/>Iglesia So-Mang <br/>(Morón 3744, Flores. CABA)</p>
+            <button className={style.smallButton}>GOOGLE MAPS</button>
+        </div>
         </>
     )
 }

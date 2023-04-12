@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville');
+@import url('https://fonts.googleapis.com/css2?family=Poppins'); 
+@import url('https://fonts.googleapis.com/css2?family=SourceSansPro');
 
 .imgDiv {
 	display: flex;
@@ -55,7 +57,7 @@
 }
 
 .pWellcomeDiv {
-    margin: 10%;
+	margin: 10%;
 	font-family: 'Libre Baskerville';
 	font-style: italic;
 	font-weight: 400;
@@ -63,4 +65,41 @@
 	line-height: 25px;
 	text-align: center;
 	color: #868686;
+}
+
+.h3Div {
+	font-family: 'Libre Baskerville';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 13px;
+	line-height: 16px;
+	text-align: center;
+	letter-spacing: 0.5em;
+	color: #e66a6a;
+	border-top: 1px solid #f19d9d;
+	border-bottom: 1px solid #f19d9d;
+	padding: 1rem;
+}
+
+.pCeremonyDiv {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+	text-align: center;
+	color: #4e4e4e;
+}
+
+.smallButton {
+    margin: 5%;
+	font-family:'Source Sans Pro';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 20px;
+	text-align: center;
+	color: #9e8d8d;
+	background: #f9e6e6;
+	border-radius: 50px;
 }
