@@ -1,38 +1,66 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville');
 
-.imgDiv{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    margin-top: 20vh;
-    width: 100vw;
+.imgDiv {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	margin-top: 20vh;
+	width: 100vw;
 }
 
-.imgHeliki{
-    height: auto;
-    width: 250px;
-    justify-content: center;
-    align-content: center;
+.imgHeliki {
+	height: auto;
+	width: 250px;
+	justify-content: center;
+	align-content: center;
 }
 
-.pImgDiv{
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    font-family: 'libre baskerville';
-    font-style: italic ;
-    letter-spacing: 25px;
-    color: #868686;
-    font-weight: 400;
-    
+.pImgDiv {
+	writing-mode: vertical-rl;
+	text-orientation: upright;
+	font-family: 'libre baskerville';
+	font-style: italic;
+	letter-spacing: 25px;
+	color: #868686;
+	font-weight: 400;
 }
 
-.pDownDiv{
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    margin: 0;
-    width: 50%;
-    color: #F19D9D;;
-       
+.pDownDiv {
+	writing-mode: vertical-rl;
+	text-orientation: upright;
+	margin-top: 20%;
+	margin-bottom: 25%;
+	width: 50%;
+	color: #f19d9d;
+}
+
+.wellcomeDiv {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+}
+
+.h2Div {
+	font-family: 'Libre Baskerville';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 22px;
+	letter-spacing: 5px;
+	line-height: 27px;
+	color: #4e4e4e;
+}
+
+.pWellcomeDiv {
+    margin: 10%;
+	font-family: 'Libre Baskerville';
+	font-style: italic;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 25px;
+	text-align: center;
+	color: #868686;
 }

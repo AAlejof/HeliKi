@@ -16,6 +16,13 @@ const Home = () => {
                 <i class="fa-solid fa-caret-down"></i>
             </p>
         </div>
+        <div className={style.wellcomeDiv}>
+            <h2 className={style.h2Div}>SHARE <br/>LOVE</h2>
+            <p className={style.pWellcomeDiv}>Hola! Estamos muy felices de encontrarnos en Buenos Aires para festejar nuestro casamiento.
+                <br/>¡Gracias por venir!
+                <br/>Heli & Kiki
+            </p>
+        </div>
         </>
     )
 }
