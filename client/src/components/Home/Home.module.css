@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville');
 @import url('https://fonts.googleapis.com/css2?family=Poppins'); 
-@import url('https://fonts.googleapis.com/css2?family=SourceSansPro');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 
 .imgDiv {
 	display: flex;
@@ -79,8 +79,12 @@
 	border-top: 1px solid #f19d9d;
 	border-bottom: 1px solid #f19d9d;
 	padding: 1rem;
+    margin-bottom: 15%;
 }
 
+.ceremonyDiv{
+    margin: 10%;
+}
 .pCeremonyDiv {
 	font-family: 'Poppins';
 	font-style: normal;
@@ -89,10 +93,11 @@
 	line-height: 24px;
 	text-align: center;
 	color: #4e4e4e;
+    margin-bottom: 15%;
 }
 
 .smallButton {
-    margin: 5%;
+    margin-bottom: 7%;
 	font-family:'Source Sans Pro';
 	font-style: normal;
 	font-weight: 600;
@@ -102,4 +107,9 @@
 	color: #9e8d8d;
 	background: #f9e6e6;
 	border-radius: 50px;
+    border-style: none;
+    padding-top: 14px;
+    padding-left: 25px;
+    padding-bottom: 14px;
+    padding-right: 25px;
 }
