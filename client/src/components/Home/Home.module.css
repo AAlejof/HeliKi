@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville');
-@import url('https://fonts.googleapis.com/css2?family=Poppins'); 
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 
 .imgDiv {
@@ -79,7 +79,7 @@
 	border-top: 1px solid #f19d9d;
 	border-bottom: 1px solid #f19d9d;
 	padding: 1rem;
-    margin-bottom: 15%;
+	margin-bottom: 15%;
 	width: 100%;
 }
 
@@ -94,13 +94,13 @@
 	line-height: 24px;
 	text-align: center;
 	color: #4e4e4e;
-    margin-bottom: 15%;
+	margin-bottom: 15%;
 }
 
 .smallButton {
-    margin-bottom: 7%;
+	margin-bottom: 7%;
 	width: 150px;
-	font-family:'Source Sans Pro';
+	font-family: 'Source Sans Pro';
 	font-style: normal;
 	font-weight: 600;
 	font-size: 16px;
@@ -109,10 +109,39 @@
 	color: #9e8d8d;
 	background: #f9e6e6;
 	border-radius: 50px;
-    border-style: none;
-    padding-top: 14px;
-    padding-left: 25px;
-    padding-bottom: 14px;
-    padding-right: 25px;
+	border-style: none;
+	padding-top: 14px;
+	padding-left: 25px;
+	padding-bottom: 14px;
+	padding-right: 25px;
 	cursor: pointer;
+}
+
+.tipsDiv{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 250px;
+	/* width: 100vw; */
+	background: #DFDFDF;
+	margin-bottom: 7%;
+	padding: 80px ;
+
+}
+
+.tipsButton {
+	height: 85px;
+	width: 340px;
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 13px;
+	line-height: 20px;
+	text-align: center;
+	letter-spacing: 0.25em;
+	color: #ffffff;
+	background-color: #F19D9D;
+	border-radius: 42px;
+	border-style: none;
+	
 }

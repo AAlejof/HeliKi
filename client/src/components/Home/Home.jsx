@@ -39,8 +39,13 @@ const Home = () => {
                 <button className={style.smallButton}><i class="fa-solid fa-map-location-dot fa-xl"></i></button>
             </Link>
         </div>
-        <div>
+        <div className={style.eventsDiv}>
             <Form/>
+        </div>
+        <div className={style.tipsDiv} >
+            <Link to='/tips'>
+                <button className={style.tipsButton}>TIPS & MORE <br /> FOR ARGENTINA</button>
+            </Link>
         </div>
         </>
     )
