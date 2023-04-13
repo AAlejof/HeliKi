@@ -1,4 +1,5 @@
 import style from './Form.module.css';
+import image from '../../assets/spinningWorld.gif';
 import React, { useEffect, useState } from 'react';
 //import { useDispatch, useSelector } from 'react-redux';
 //import {} from '../../redux/actions/actions';
@@ -37,6 +38,7 @@ export default function Form() {
                         </div>
                     </form>
                     <button className={style.smallButton}>ENVIAR</button>
+                    <img src={image} alt="spinningWorld" className={style.imgWorld}/>
                 </div>
             </div>
         </>
