@@ -1,5 +1,3 @@
-
-
 .h3Div {
 	font-family: 'Libre Baskerville';
 	font-style: normal;
@@ -12,13 +10,14 @@
 	border-top: 1px solid #f19d9d;
 	border-bottom: 1px solid #f19d9d;
 	padding: 1rem;
-    margin-bottom: 15%;
+	margin-bottom: 15%;
 }
 
-.rsvpDiv{
-    margin: 10%;
+.rsvpDiv {
+	margin: 10%;
 }
-.pRsvpDiv {
+
+.h4Div {
 	font-family: 'Poppins';
 	font-style: normal;
 	font-weight: 400;
@@ -26,12 +25,31 @@
 	line-height: 24px;
 	text-align: center;
 	color: #4e4e4e;
-    margin-bottom: 15%;
+	margin-bottom: 5%;
 }
-
-.smallButton {
+.inputPill{
     margin-bottom: 7%;
-	font-family:'Source Sans Pro';
+    width: 200px;
+	font-family: 'Source Sans Pro';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 20px;
+	text-align: left;
+	color: #9e8d8d;
+	background: #f9e6e6;
+	border-radius: 50px;
+	border-style: none;
+	padding-top: 14px;
+	padding-left: 25px;
+	padding-bottom: 14px;
+	padding-right: 25px;
+	cursor: pointer;
+}
+.smallButton {
+	margin-bottom: 7%;
+    width: 150px;
+	font-family: 'Source Sans Pro';
 	font-style: normal;
 	font-weight: 600;
 	font-size: 16px;
@@ -40,10 +58,41 @@
 	color: #9e8d8d;
 	background: #f9e6e6;
 	border-radius: 50px;
-    border-style: none;
-    padding-top: 14px;
-    padding-left: 25px;
-    padding-bottom: 14px;
-    padding-right: 25px;
+	border-style: none;
+	padding-top: 14px;
+	padding-left: 25px;
+	padding-bottom: 14px;
+	padding-right: 25px;
 	cursor: pointer;
+}
+
+.cbRound {
+	width: 1.3em;
+	height: 1.3em;
+	background-color: white;
+	border-radius: 50%;
+	vertical-align: middle;
+	border: 1px solid #ddd;
+	appearance: none;
+	-webkit-appearance: none;
+	outline: none;
+	cursor: pointer;
+}
+
+.rsvpForm {
+    margin-bottom: 10%;
+
+}
+
+.cbRound:checked {
+	background-color: #9e8d8d;
+}
+
+.formSpan {
+    font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+	color: #4e4e4e;
 }
