@@ -99,6 +99,7 @@
 
 .smallButton {
     margin-bottom: 7%;
+	width: 150px;
 	font-family:'Source Sans Pro';
 	font-style: normal;
 	font-weight: 600;
