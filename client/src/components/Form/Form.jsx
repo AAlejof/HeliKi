@@ -23,15 +23,15 @@ export default function Form() {
                         <div>
                             <input type="text" Placeholder='Nombre/s' className={style.inputPill}/>
                         </div>
-                        <div>
                             <h4  className={style.h4Div}>ASISTENCIA</h4>
+                        <div className={style.formDiv}>
                             <input type="checkbox" className={style.cbRound}/><span className={style.formSpan}> Sí, obvio! </span>
                             <input type="checkbox" className={style.cbRound}/> <span className={style.formSpan}> Plus 1</span>
                             <br/>
                             <input type="checkbox" className={style.cbRound}/><span className={style.formSpan}> No, perdón! </span>
                         </div>
-                        <h4  className={style.h4Div}>MENÚ</h4>
-                        <div>
+                            <h4  className={style.h4Div}>MENÚ</h4>
+                        <div className={style.formDiv}>
                             <input type="checkbox" className={style.cbRound}/> <span className={style.formSpan}> Veganx</span>
                             <br/>
                             <input type="checkbox" className={style.cbRound}/><span className={style.formSpan}> Vegetarianx</span>
