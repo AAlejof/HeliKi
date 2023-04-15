@@ -1,0 +1,17 @@
+.sectionsDiv{
+    margin-top: 105px;
+}
+
+.h3Div {
+	font-family: 'Libre Baskerville';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 11px;
+	line-height: 16px;
+	text-align: left;
+	letter-spacing: 0.5em;
+	color: #e66a6a;
+	border-bottom: 1px solid #f19d9d;
+	padding: 1rem;
+	width: 90vw;
+}
