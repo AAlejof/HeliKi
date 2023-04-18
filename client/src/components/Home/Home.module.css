@@ -9,7 +9,6 @@
 	align-content: center;
 	align-items: center;
 	margin-top: 20vh;
-	/* width: 100vw; */
 }
 
 .imgHeliki {
@@ -127,7 +126,6 @@
 	justify-content: center;
 	align-items: center;
 	height: 250px;
-	/* width: 100vw; */
 	background: #DFDFDF;
 	margin-bottom: 7%;
 	padding: 80px ;
@@ -149,4 +147,161 @@
 	border-radius: 42px;
 	border-style: none;
 	
+}
+
+
+/* ---------- tablet & desktop--------- */
+
+@media (min-width: 451px) {
+
+	.imgDiv {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+		margin-top: 15vh;
+	}
+	
+	.imgHeliki {
+		height: auto;
+		width: 350px;
+		justify-content: center;
+		align-content: center;
+	}
+	
+	.pImgDiv {
+		writing-mode: vertical-rl;
+		text-orientation: upright;
+		font-family: 'libre baskerville';
+		font-style: italic;
+		font-size: 25px;
+		letter-spacing: 25px;
+		color: #868686;
+		font-weight: 400;
+	}
+	
+	.pDownDiv {
+		writing-mode: vertical-rl;
+		text-orientation: upright;
+		margin-top: 0%;
+		margin-bottom: 10%;
+		width: 50%;
+		color: #f19d9d;
+	}
+
+	.wellcomeDiv {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+	}
+	
+	.h2Div {
+		font-family: 'Libre Baskerville';
+		font-style: normal;
+		font-weight: 700;
+		font-size: 44px;
+		letter-spacing: 10px;
+		line-height: 45px;
+		color: #4e4e4e;
+	}
+	
+	.pWellcomeDiv {
+		margin: 5%;
+		font-family: 'Libre Baskerville';
+		font-style: italic;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 30px;
+		text-align: center;
+		color: #868686;
+	}
+	
+	.h3Div {
+		font-family: 'Libre Baskerville';
+		font-style: normal;
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 16px;
+		text-align: center;
+		letter-spacing: 0.5em;
+		color: #e66a6a;
+		border-top: 1px solid #f19d9d;
+		border-bottom: 1px solid #f19d9d;
+		padding: 1rem;
+		margin-bottom: 10%;
+		width: 100vw;
+	}
+	
+	.eventsDiv{
+		margin: 10%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	.pEventsDiv {
+		font-family: 'Poppins';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 30px;
+		text-align: center;
+		color: #4e4e4e;
+		margin-bottom: 10%;
+	}
+	
+	.smallButton {
+		margin-bottom: 7%;
+		width: 150px;
+		font-family: 'Source Sans Pro';
+		font-style: normal;
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 20px;
+		text-align: center;
+		color: #9e8d8d;
+		background: #f9e6e6;
+		border-radius: 50px;
+		border-style: none;
+		padding-top: 14px;
+		padding-left: 25px;
+		padding-bottom: 14px;
+		padding-right: 25px;
+		cursor: pointer;
+	}
+	
+	.tipsDiv{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 250px;
+		background: #DFDFDF;
+		margin-bottom: 3.7%;
+		padding: 80px ;
+	
+	}
+	
+	.tipsButton {
+		height: 85px;
+		width: 340px;
+		font-family: 'Poppins';
+		font-style: normal;
+		font-weight: 600;
+		font-size: 13px;
+		line-height: 20px;
+		text-align: center;
+		letter-spacing: 0.25em;
+		color: #ffffff;
+		background-color: #F19D9D;
+		border-radius: 42px;
+		border-style: none;
+		
+	}
+	
+	
+
 }
