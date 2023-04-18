@@ -35,7 +35,7 @@ const Tips = () => {
 						<li>Posta, no se mueran</li>
 					</ul>
 				</div> 
-				: <div></div> }
+				: null }
 				</div>
 				<div className={style.tipsDiv}>
 					<p className={style.h3Div}>TRANSPORTE</p>
@@ -54,7 +54,7 @@ const Tips = () => {
 				<div>
 					mapaaaa
 				</div> 
-				: <div></div> }
+				: null }
 				<div className={style.tipsDiv}>
 					<p className={style.h3Div}>VIAJES POR SUDAMÉRICA</p>
 					<p className={style.faDiv}>
