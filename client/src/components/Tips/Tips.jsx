@@ -22,7 +22,15 @@ const Tips = () => {
 						: (<i class="fa-solid fa-chevron-up fa-xl"></i>) }
 					</p>
 				</div>
-				{(showContent===true) ? <div><p>No se mueran</p></div> : <div></div> }
+				{(showContent===true) ? 
+				<div>
+					<ul>
+						<li>No se mueran</li>
+						<li>Diviertanse</li>
+						<li>Posta, no se mueran</li>
+					</ul>
+				</div> 
+				: <div></div> }
 				</div>
 				<div className={style.tipsDiv}>
 					<p className={style.h3Div}>TRANSPORTE</p>
