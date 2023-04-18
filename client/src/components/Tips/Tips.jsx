@@ -5,10 +5,15 @@ import React, {useState} from 'react';
 
 const Tips = () => {
 
-	const [showContent, setShowContent] = useState(false);
+	const [showTips, setShowTips] = useState(false);
+	const [showMap, setShowMap] = useState(false);
 
-	const toggleContent = () => {
-		setShowContent(!showContent);
+	const toggleTips = () => {
+		setShowTips(!showTips);
+	};
+
+	const toggleMap = () => {
+		setShowMap(!showMap);
 	};
 
 	return (
@@ -17,12 +22,12 @@ const Tips = () => {
 				<div>
 				<div className={style.tipsDiv}>
 					<p className={style.h3Div}>TIPS GENERALES</p>
-					<p className={style.faDiv} onClick={toggleContent}>
-						{ (showContent=== false) ? (<i class="fa-light fa-plus fa-2xl"></i>) 
+					<p className={style.faDiv} onClick={toggleTips}>
+						{ (showTips=== false) ? (<i class="fa-light fa-plus fa-2xl"></i>) 
 						: (<i class="fa-solid fa-chevron-up fa-xl"></i>) }
 					</p>
 				</div>
-				{(showContent===true) ? 
+				{(showTips===true) ? 
 				<div>
 					<ul>
 						<li>No se mueran</li>
@@ -40,10 +45,16 @@ const Tips = () => {
 				</div>
 				<div className={style.tipsDiv}>
 					<p className={style.h3Div}>MAPA DE LA CIUDAD</p>
-					<p className={style.faDiv}>
-						<i class="fa-light fa-plus fa-2xl"></i>
+					<p className={style.faDiv} onClick={toggleMap}>
+					{ (showMap=== false) ? (<i class="fa-light fa-plus fa-2xl"></i>) 
+						: (<i class="fa-solid fa-chevron-up fa-xl"></i>) }
 					</p>
 				</div>
+				{(showMap===true) ? 
+				<div>
+					mapaaaa
+				</div> 
+				: <div></div> }
 				<div className={style.tipsDiv}>
 					<p className={style.h3Div}>VIAJES POR SUDAMÉRICA</p>
 					<p className={style.faDiv}>
