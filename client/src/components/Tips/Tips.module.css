@@ -1,3 +1,5 @@
+/* ---------MOBILE--------- */
+
 .sectionsDiv{
     margin-top: 150px;
 }
@@ -52,4 +54,46 @@
 	padding-bottom: 14px;
 	padding-right: 25px;
 	cursor: pointer;
+}
+
+/* ---------- tablet & desktop--------- */
+
+@media (min-width: 452px) {
+	.sectionsDiv{
+		margin-top: 15vh;
+	}
+
+	.tipsDiv {
+		display: flex;
+		justify-content: left;
+
+	}
+	
+	.h3Div {
+		font-family: 'Libre Baskerville';
+		font-style: normal;
+		font-weight: 700;
+		font-size: 18px;
+		/* line-height: 16px; */
+		text-align:center;
+		letter-spacing: 0.5em;
+		color: #e66a6a;
+		border-bottom: 1px solid #f19d9d;
+		padding: 1rem;
+		/* width: 60vw; */
+		margin-top: 11px;
+		margin-bottom: 11px;
+	}
+	
+	.faDiv{
+		display: flex;
+		justify-content: flex-start;
+		align-items: left;
+		color: #e66a6a;
+		border-bottom: 1px solid #f19d9d;
+		padding: 1rem;
+		/* width: 40vw;  */
+		margin-top: 11px;
+		margin-bottom: 11px;
+	}
 }

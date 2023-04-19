@@ -31,7 +31,7 @@ const Tips = () => {
 			<div className={style.sectionsDiv}>
 				<div>
 				<div className={style.tipsDiv}>
-					<p className={style.h3Div}>TIPS GENERALES</p>
+					<p className={style.h3Div}>TIPS GENERALES </p>
 					<p className={style.faDiv} onClick={toggleTips}>
 						{ (showTips=== false) ? (<i class="fa-light fa-plus fa-2xl"></i>) 
 						: (<i class="fa-solid fa-chevron-up fa-xl"></i>) }
