@@ -6,14 +6,24 @@ import React, {useState} from 'react';
 const Tips = () => {
 
 	const [showTips, setShowTips] = useState(false);
+	const [showTransport, setShowTransport] = useState(false);
 	const [showMap, setShowMap] = useState(false);
+	const [showSA, setShowSA] = useState(false);
 
 	const toggleTips = () => {
 		setShowTips(!showTips);
 	};
 
+	const toggleTransport = () => {
+		setShowTransport(!showTransport);
+	};
+
 	const toggleMap = () => {
 		setShowMap(!showMap);
+	};
+
+	const toggleSA = () => {
+		setShowSA(!showSA);
 	};
 
 	return (
@@ -39,10 +49,16 @@ const Tips = () => {
 				</div>
 				<div className={style.tipsDiv}>
 					<p className={style.h3Div}>TRANSPORTE</p>
-					<p className={style.faDiv}>
-						<i class="fa-light fa-plus fa-2xl"></i>
+					<p className={style.faDiv} onClick={toggleTransport}>
+					{ (showTransport=== false) ? (<i class="fa-light fa-plus fa-2xl"></i>) 
+						: (<i class="fa-solid fa-chevron-up fa-xl"></i>) }
 					</p>
 				</div>
+				{(showTransport===true) ? 
+				<div>
+					tomate el 60 ramal Massshwih (uds seguro lo pronuncian bien). Pero no te quedés dormido porque sos pollo
+				</div> 
+				: null }
 				<div className={style.tipsDiv}>
 					<p className={style.h3Div}>MAPA DE LA CIUDAD</p>
 					<p className={style.faDiv} onClick={toggleMap}>
@@ -57,10 +73,16 @@ const Tips = () => {
 				: null }
 				<div className={style.tipsDiv}>
 					<p className={style.h3Div}>VIAJES POR SUDAMÉRICA</p>
-					<p className={style.faDiv}>
-						<i class="fa-light fa-plus fa-2xl"></i>
+					<p className={style.faDiv} onClick={toggleSA}>
+					{ (showSA=== false) ? (<i class="fa-light fa-plus fa-2xl"></i>) 
+						: (<i class="fa-solid fa-chevron-up fa-xl"></i>) }
 					</p>
 				</div>
+				{(showSA===true) ? 
+				<div>
+					ganamos 10 mundiales, gatoh!
+				</div> 
+				: null }
 			</div>
 			<div>
 				<Link to="/home">
