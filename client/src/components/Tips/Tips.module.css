@@ -15,7 +15,6 @@
 	font-style: normal;
 	font-weight: 700;
 	font-size: 11px;
-	/* line-height: 16px; */
 	text-align: left;
 	letter-spacing: 0.5em;
 	color: #e66a6a;
@@ -74,7 +73,6 @@
 		font-style: normal;
 		font-weight: 700;
 		font-size: 14px;
-		/* line-height: 16px; */
 		text-align:center;
 		letter-spacing: 0.5em;
 		color: #e66a6a;
@@ -94,7 +92,6 @@
 		align-items: left;
 		color: #e66a6a;
 		border-style: none;
-		/* border-bottom: 1px solid #f19d9d; */
 		padding: 1rem;
 		margin-top: 11px;
 		margin-bottom: 11px;
