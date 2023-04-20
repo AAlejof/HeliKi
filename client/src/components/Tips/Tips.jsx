@@ -31,7 +31,7 @@ const Tips = () => {
 			<div className={style.sectionsDiv}>
 				<div>
 				<div className={style.tipsDiv}>
-					<p className={style.h3Div}>TIPS GENERALES </p>
+					<p className={style.h3Div } onClick={toggleTips}>TIPS GENERALES </p>
 					<p className={style.faDiv} onClick={toggleTips}>
 						{ (showTips=== false) ? (<i class="fa-light fa-plus fa-2xl"></i>) 
 						: (<i class="fa-solid fa-chevron-up fa-xl"></i>) }
@@ -48,7 +48,7 @@ const Tips = () => {
 				: null }
 				</div>
 				<div className={style.tipsDiv}>
-					<p className={style.h3Div}>TRANSPORTE</p>
+					<p className={style.h3Div} onClick={toggleTransport}>TRANSPORTE</p>
 					<p className={style.faDiv} onClick={toggleTransport}>
 					{ (showTransport=== false) ? (<i class="fa-light fa-plus fa-2xl"></i>) 
 						: (<i class="fa-solid fa-chevron-up fa-xl"></i>) }
@@ -60,7 +60,7 @@ const Tips = () => {
 				</div> 
 				: null }
 				<div className={style.tipsDiv}>
-					<p className={style.h3Div}>MAPA DE LA CIUDAD</p>
+					<p className={style.h3Div} onClick={toggleMap}>MAPA DE LA CIUDAD</p>
 					<p className={style.faDiv} onClick={toggleMap}>
 					{ (showMap=== false) ? (<i class="fa-light fa-plus fa-2xl"></i>) 
 						: (<i class="fa-solid fa-chevron-up fa-xl"></i>) }
@@ -72,7 +72,7 @@ const Tips = () => {
 				</div> 
 				: null }
 				<div className={style.tipsDiv}>
-					<p className={style.h3Div}>VIAJES POR SUDAMÉRICA</p>
+					<p className={style.h3Div} onClick={toggleSA}>VIAJES POR SUDAMÉRICA</p>
 					<p className={style.faDiv} onClick={toggleSA}>
 					{ (showSA=== false) ? (<i class="fa-light fa-plus fa-2xl"></i>) 
 						: (<i class="fa-solid fa-chevron-up fa-xl"></i>) }
