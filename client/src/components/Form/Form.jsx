@@ -1,6 +1,6 @@
 import style from './Form.module.css';
 import image from '../../assets/spinningWorld.gif';
-import React, { useEffect, useState } from 'react';
+//import React, { useEffect, useState } from 'react';
 //import { useDispatch, useSelector } from 'react-redux';
 //import {} from '../../redux/actions/actions';
 //import Validate from './Validations';
