@@ -1,1 +1,27 @@
+/* ---------MOBILE--------- */
+
+.dashboardDiv{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+    margin-top: 20vh;
+}
+
+.h3Dashboard {
+    font-family: 'Libre Baskerville';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	text-align: center;
+	letter-spacing: 0.5em;
+	color: #e66a6a;
+	border-top: 1px solid #f19d9d;
+	border-bottom: 1px solid #f19d9d;
+	padding: 1rem;
+	margin-bottom: 15%;
+	width: 100vw;
+
+}
+
 /* ---------- tablet & desktop--------- */
