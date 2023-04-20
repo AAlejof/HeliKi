@@ -6,10 +6,13 @@ import React from 'react';
 const Admin = () => {
     return(
         <>
-            <div>
-                <p>
+            <div className={style.dashboardDiv}>
+                <h3 className={style.h3Dashboard}>
                 Dashboard
-                </p> 
+                </h3> 
+                <div>
+                    Invitad@s/Guests
+                </div>
             </div>
         
         </>
