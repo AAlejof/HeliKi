@@ -19,9 +19,37 @@
 	border-top: 1px solid #f19d9d;
 	border-bottom: 1px solid #f19d9d;
 	padding: 1rem;
-	margin-bottom: 15%;
+	margin-bottom: 5%;
 	width: 100vw;
 
 }
 
+.guestsDiv {
+    display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.h4Dashboard{
+    font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 24px;
+	text-align: center;
+	color: #4e4e4e;
+	margin-bottom: 5%;
+    border-bottom: 1px solid #f19d9d;
+}
+
+.guestsIcons{
+    display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+    width: 90vw;
+    color: #e66a6a;
+    padding: 1rem;
+    border-bottom: 1px solid #f19d9d;
+}
 /* ---------- tablet & desktop--------- */
