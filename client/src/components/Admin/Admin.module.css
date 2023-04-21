@@ -6,6 +6,7 @@
 	justify-content: center;
 	align-items: center;
     margin-top: 20vh;
+    margin-bottom: 20vh;
 }
 
 .h3Dashboard {
@@ -43,6 +44,16 @@
     border-bottom: 1px solid #f19d9d;
 }
 
+.summaryDiv{
+    font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 24px;
+	text-align: center;
+	color: #4e4e4e;
+}
+
 .guestsIcons{
     display: flex;
 	justify-content: space-evenly;
@@ -51,5 +62,6 @@
     color: #e66a6a;
     padding: 1rem;
     border-bottom: 1px solid #f19d9d;
+    text-align: left;
 }
 /* ---------- tablet & desktop--------- */
