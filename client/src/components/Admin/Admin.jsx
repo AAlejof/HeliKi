@@ -11,6 +11,15 @@ const Admin = () => {
                 Dashboard
                 </h3> 
                 <div className={style.guestsDiv}>
+                    <div>
+                        <h4 className={style.h4Dashboard}>Resumen/Summary</h4>
+                        <div className={style.summaryDiv}>
+                            <p>Total guests: 2</p>
+                            <p>Total vegetarians: 0</p>
+                            <p>Total vegans: 1</p>
+                            <p>Not attending: 1</p>
+                        </div>
+                    </div>
                     <h4 className={style.h4Dashboard}>Invitad@s/Guests</h4> 
                     <table>
                         <thead className={style.guestsIcons}>
@@ -20,6 +29,29 @@ const Admin = () => {
                             <th><i class="fa-solid fa-utensils fa-xl"></i></th>
                             <th><i class="fa-solid fa-user-plus fa-xl"></i></th>
                         </thead>
+                        <tbody >
+                            <tr className={style.guestsIcons}>
+                                <td>Ale</td>
+                                <td><i class="fa-regular fa-eye fa-xl"></i></td>
+                                <td><i class="fa-solid fa-check fa-xl"></i></td>
+                                <td><i class="fa-solid fa-carrot fa-xl"></i></td>
+                                <td><i class="fa-solid fa-check fa-xl"></i></td>
+                            </tr>
+                            <tr className={style.guestsIcons}>
+                                <td>Nati</td>
+                                <td><i class="fa-regular fa-eye fa-xl"></i></td>
+                                <td><i class="fa-solid fa-check fa-xl"></i></td>
+                                <td><i class="fa-solid fa-drumstick-bite fa-xl"></i></td>
+                                <td><i class="fa-solid fa-xmark fa-xl"></i></td>
+                            </tr>
+                            <tr className={style.guestsIcons}>
+                                <td>Buch</td>
+                                <td><i class="fa-regular fa-eye fa-xl"></i></td>
+                                <td><i class="fa-solid fa-xmark fa-xl"></i></td>
+                                <td><i class="fa-solid fa-drumstick-bite fa-xl"></i></td>
+                                <td><i class="fa-solid fa-xmark fa-xl"></i></td>
+                            </tr>
+                        </tbody>
                     </table>
                 </div>
             </div>
