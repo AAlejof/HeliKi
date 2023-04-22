@@ -55,9 +55,11 @@
 }
 
 .guestsIcons{
-    display: flex;
-	justify-content: space-evenly;
-	align-items: center;
+    display: grid; 
+    grid-template-columns: 3fr 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr; 
+    gap: 0px 0px; 
+    justify-items: center;
     width: 90vw;
     color: #e66a6a;
     padding: 1rem;
