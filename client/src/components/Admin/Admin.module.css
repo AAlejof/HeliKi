@@ -65,5 +65,9 @@
     padding: 1rem;
     border-bottom: 1px solid #f19d9d;
     text-align: left;
+    font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
 }
 /* ---------- tablet & desktop--------- */
