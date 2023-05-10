@@ -4,6 +4,11 @@ import image from '../../assets/heliki.gif';
 import React from 'react';
 
 const Admin = () => {
+
+    const handleSubmit = () => {
+
+    }
+
     return(
         <>
             <div className={style.dashboardDiv}>
@@ -53,6 +58,33 @@ const Admin = () => {
                             </tr>
                         </tbody>
                     </table>
+                </div>
+                <div className={style.dashboardDiv}>
+                    <h3 className={style.h3Dashboard}>Agregar/Add</h3>
+                    <div>
+                <div className={style.rsvpDiv}>
+                    <h3 className={style.h3Div}>RSVP</h3>
+                    <form className={style.rsvpForm} onSubmit={(e) => handleSubmit(e)}>
+                        <div>
+                            <input type="text" Placeholder='Nombre/s' className={style.inputPill}/>
+                        </div>
+                            <h4  className={style.h4Div}>ASISTENCIA</h4>
+                        <div className={style.formDiv}>
+                            <input type="checkbox" className={style.cbRound}/><span className={style.formSpan}> Sí, obvio! </span>
+                            <input type="checkbox" className={style.cbRound}/> <span className={style.formSpan}> Plus 1</span>
+                            <br/>
+                            <input type="checkbox" className={style.cbRound}/><span className={style.formSpan}> No, perdón! </span>
+                        </div>
+                            <h4  className={style.h4Div}>MENÚ</h4>
+                        <div className={style.formDiv}>
+                            <input type="checkbox" className={style.cbRound}/> <span className={style.formSpan}> Veganx</span>
+                            <br/>
+                            <input type="checkbox" className={style.cbRound}/><span className={style.formSpan}> Vegetarianx</span>
+                        </div>
+                    </form>
+                    <button className={style.smallButton}>ENVIAR</button>
+                   </div>
+            </div>
                 </div>
             </div>
         
