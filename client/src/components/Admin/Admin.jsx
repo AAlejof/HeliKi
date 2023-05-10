@@ -63,7 +63,6 @@ const Admin = () => {
                     <h3 className={style.h3Dashboard}>Agregar/Add</h3>
                     <div>
                 <div className={style.rsvpDiv}>
-                    <h3 className={style.h3Div}>RSVP</h3>
                     <form className={style.rsvpForm} onSubmit={(e) => handleSubmit(e)}>
                         <div>
                             <input type="text" Placeholder='Nombre/s' className={style.inputPill}/>
@@ -82,7 +81,7 @@ const Admin = () => {
                             <input type="checkbox" className={style.cbRound}/><span className={style.formSpan}> Vegetarianx</span>
                         </div>
                     </form>
-                    <button className={style.smallButton}>ENVIAR</button>
+                    <button className={style.smallButton}><i class="fa-regular fa-user fa-xl"></i></button>
                    </div>
             </div>
                 </div>
