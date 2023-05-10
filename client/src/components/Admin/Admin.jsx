@@ -60,7 +60,7 @@ const Admin = () => {
                     </table>
                 </div>
                 <div className={style.dashboardDiv}>
-                    <h3 className={style.h3Dashboard}>Agregar/Add</h3>
+                    <h4 className={style.h4Dashboard}>Agregar/Add</h4>
                     <div>
                 <div className={style.rsvpDiv}>
                     <form className={style.rsvpForm} onSubmit={(e) => handleSubmit(e)}>
