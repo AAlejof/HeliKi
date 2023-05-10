@@ -149,6 +149,7 @@
 	border-radius: 42px;
 	border-style: none;
 	
+	
 }
 
 
@@ -301,6 +302,7 @@
 		background-color: #F19D9D;
 		border-radius: 42px;
 		border-style: none;
+		cursor: pointer;
 		
 	}
 	
