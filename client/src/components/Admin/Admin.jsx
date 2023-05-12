@@ -61,7 +61,7 @@ const Admin = () => {
                 </div>
                 <div className={style.dashboardDiv}>
                     <h4 className={style.h4Dashboard}>Agregar/Add</h4>
-                    <div>
+            <div>
                 <div className={style.rsvpDiv}>
                     <form className={style.rsvpForm} onSubmit={(e) => handleSubmit(e)}>
                         <div>
@@ -69,10 +69,10 @@ const Admin = () => {
                         </div>
                             <h4  className={style.h4Div}>ASISTENCIA</h4>
                         <div className={style.formDiv}>
-                            <input type="checkbox" className={style.cbRound}/><span className={style.formSpan}> Sí, obvio! </span>
-                            <input type="checkbox" className={style.cbRound}/> <span className={style.formSpan}> Plus 1</span>
+                            <span className={style.formSpan}><i class="fa-regular fa-calendar-check fa-xl"></i></span><input type="checkbox" className={style.cbRound}/>
+                            <span className={style.formSpan}> <i class="fa-solid fa-user-plus fa-xl"></i></span><input type="checkbox" className={style.cbRound}/> 
                             <br/>
-                            <input type="checkbox" className={style.cbRound}/><span className={style.formSpan}> No, perdón! </span>
+                            <span className={style.formSpan}> <i class="fa-solid fa-xmark fa-xl"></i></span><input type="checkbox" className={style.cbRound}/>
                         </div>
                             <h4  className={style.h4Div}>MENÚ</h4>
                         <div className={style.formDiv}>
