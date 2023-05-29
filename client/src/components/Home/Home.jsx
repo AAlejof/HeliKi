@@ -29,7 +29,7 @@ const Home = () => {
             <h3 className={style.h3Div}>CEREMONIA</h3>
             <p  className={style.pEventsDiv}>Sábado <br/> 18.11.2023 <br/><br/>19:00 h <br/><br/>Iglesia So-Mang <br/>(Morón 3744, Flores, CABA)</p>
             <Link to='https://goo.gl/maps/BXHWCvkLRu8VpnDf9'>
-                <button className={style.smallButton}>GOOGLE MAPS</button>
+                <button className={style.smallButton}><i class="fa-solid fa-map-location-dot fa-xl"></i></button>
             </Link>
         </div>
         <div className={style.eventsDiv}>

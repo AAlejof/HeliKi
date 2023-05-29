@@ -15,7 +15,9 @@
 
 .imgHeliki {
 	height: auto;
-	width: 250px;
+	width: 150px;
+	margin-left: 12vw;
+	margin-right: 12vw;
 	justify-content: center;
 	align-content: center;
 }
@@ -24,6 +26,7 @@
 	writing-mode: vertical-rl;
 	text-orientation: upright;
 	font-family: 'libre baskerville';
+	font-size: 12px;
 	font-style: italic;
 	letter-spacing: 25px;
 	color: #868686;
@@ -52,7 +55,7 @@
 	font-style: normal;
 	font-weight: 700;
 	font-size: 22px;
-	letter-spacing: 5px;
+	/* letter-spacing: 5px; */
 	line-height: 27px;
 	color: #4e4e4e;
 }
@@ -105,7 +108,7 @@
 
 .smallButton {
 	margin-bottom: 7%;
-	width: 150px;
+	width: 75px;
 	font-family: 'Source Sans Pro';
 	font-style: normal;
 	font-weight: 600;

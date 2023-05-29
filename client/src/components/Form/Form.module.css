@@ -59,17 +59,16 @@
 .h4Div {
 	font-family: 'Poppins';
 	font-style: normal;
-	font-weight: 400;
+	font-weight: 600;
 	font-size: 16px;
 	line-height: 24px;
 	text-align: center;
-	text-decoration: underline;
 	color: #4e4e4e;
 	margin-bottom: 5%;
 }
 .smallButton {
 	margin-bottom: 7%;
-    width: 150px;
+    width: 100px;
 	font-family: 'Source Sans Pro';
 	font-style: normal;
 	font-weight: 600;
@@ -105,6 +104,10 @@
 
 }
 
+.formDiv {
+	margin-bottom: 15%;
+}
+
 .cbRound:checked {
 	background-color: #9e8d8d;
 }
@@ -114,9 +117,9 @@
 	font-style: normal;
 	font-weight: 400;
 	font-size: 16px;
-	line-height: 24px;
+	line-height: 30px;
 	color: #4e4e4e;
-	/* margin-right: 2rem; */
+	
 }
 
 .imgWorld {

@@ -47,7 +47,8 @@
 		align-content: center;
 		height: 60px;
 		width: 100vw;
-		background-color: #ffecea;
+		background-color: white;
+		border-top: solid 0.5px #a4a4a4;
 	}
 
 	.pFooterDiv {
