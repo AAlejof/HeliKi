@@ -10,7 +10,8 @@
 	align-content: center;
 	height: 10vh;
 	width: 100vw;
-	background-color: #ffecea;
+	background-color: white;
+	border-top: solid 0.5px #a4a4a4;
 }
 
 .pFooterDiv {
