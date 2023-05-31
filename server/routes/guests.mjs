@@ -4,14 +4,14 @@ import { ObjectId } from "mongodb";
 
 const router = express.Router();
 
-// This section will help you get a list of all the records.
+// This section will help you get a list of all the guests.
 router.get("/", async (req, res) => {
   let collection = await db.collection("guests");
   let results = await collection.find({}).toArray();
   res.send(results).status(200);
 });
 
-// This section will help you get a single record by id
+// This section will help you get a single guest by id
 router.get("/:id", async (req, res) => {
   let collection = await db.collection("guests");
   let query = {_id: new ObjectId(req.params.id)};
@@ -21,12 +21,12 @@ router.get("/:id", async (req, res) => {
   else res.send(result).status(200);
 });
 
-// This section will help you create a new record.
+// This section will help you create a new guest.
 router.post("/", async (req, res) => {
   let newDocument = {
     name: req.body.name,
     plusOne: req.body.position,
-    resvp: req.body.position,
+    rsvp: req.body.position,
     vegan: req.body.level,
     vegetarian: req.body.level
   };
@@ -35,14 +35,14 @@ router.post("/", async (req, res) => {
   res.send(result).status(204);
 });
 
-// This section will help you update a record by id.
+// This section will help you update a guest by id.
 router.patch("/:id", async (req, res) => {
   const query = { _id: new ObjectId(req.params.id) };
   const updates =  {
     $set: {
         name: req.body.name,
         plusOne: req.body.position,
-        resvp: req.body.position,
+        rsvp: req.body.position,
         vegan: req.body.level,
         vegetarian: req.body.level
     }
@@ -54,7 +54,7 @@ router.patch("/:id", async (req, res) => {
   res.send(result).status(200);
 });
 
-// This section will help you delete a record
+// This section will help you delete a guest
 router.delete("/:id", async (req, res) => {
   const query = { _id: new ObjectId(req.params.id) };
 
