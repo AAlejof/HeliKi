@@ -25,10 +25,10 @@ router.get("/:id", async (req, res) => {
 router.post("/", async (req, res) => {
   let newDocument = {
     name: req.body.name,
-    plusOne: req.body.position,
-    rsvp: req.body.position,
-    vegan: req.body.level,
-    vegetarian: req.body.level
+    plusOne: req.body.plusOne === 'true', // Convert string to boolean
+    rsvp: req.body.rsvp === 'true', // Convert string to boolean
+    vegan: req.body.vegan === 'true', // Convert string to boolean
+    vegetarian: req.body.vegetarian === 'true', // Convert string to boolean
   };
   let collection = await db.collection("guests");
   let result = await collection.insertOne(newDocument);
