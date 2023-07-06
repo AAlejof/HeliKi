@@ -56,6 +56,8 @@ export default function Form() {
   const [rsvp, setRsvp] = useState(true);
   const [vegan, setVegan] = useState(false);
   const [vegetarian, setVegetarian] = useState(false);
+  const [pescetarian, setPescetarian] = useState(false);
+  const [alergies, setAlergies] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -66,6 +68,8 @@ export default function Form() {
       rsvp: rsvp,
       vegan: vegan,
       vegetarian: vegetarian,
+      pescetarian: pescetarian,
+      alergies: alergies
     };
 
     try {
@@ -206,8 +210,8 @@ export default function Form() {
                 type="text"
                 placeholder="Tengo/tenemos alergia a..."
                 className={style.inputPill}
-                value={name}
-                onChange={(e) => setName(e.target.value)}
+                value={alergies}
+                onChange={(e) => setAlergies(e.target.value)}
               />
             </div>
           </form>

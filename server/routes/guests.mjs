@@ -28,7 +28,9 @@ router.post("/", async (req, res) => {
     plusOne: req.body.plusOne,
     rsvp: req.body.rsvp,
     vegan: req.body.vegan, 
-    vegetarian: req.body.vegetarian 
+    vegetarian: req.body.vegetarian,
+    pescetarian: req.body.pescetarian,
+    alergies: req.body.alergies
   };
   let collection = await db.collection("guests");
   let result = await collection.insertOne(newDocument);
