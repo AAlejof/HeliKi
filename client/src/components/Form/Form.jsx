@@ -97,6 +97,7 @@ export default function Form() {
       <div>
         <div className={style.rsvpDiv}>
           <h3 className={style.h3Div}>RSVP</h3>
+          <p className={style.pPlease} >Por favor, <br /> completar y enviar.</p>
           <form className={style.rsvpForm} onSubmit={handleSubmit}>
             <div>
               <input
@@ -109,21 +110,16 @@ export default function Form() {
             </div>
             <h4 className={style.h4Div}>ASISTENCIA</h4>
             <div className={style.formDiv}>
-              <input
-                type="checkbox"
-                className={style.cbRound}
-                checked={rsvp}
-                onChange={(e) => setRsvp(e.target.checked)}
-              />
-              <span className={style.formSpan}> Sí, obvio! </span>
-              <input
-                type="checkbox"
-                className={style.cbRound}
-                checked={plusOne}
-                onChange={(e) => setPlusOne(e.target.checked)}
-              />
-              <span className={style.formSpan}> Plus 1</span>
-              <br />
+              <div>
+                <input
+                  type="checkbox"
+                  className={style.cbRound}
+                  checked={rsvp}
+                  onChange={(e) => setRsvp(e.target.checked)}
+                />
+                <span className={style.formSpan}> Sí, obvio! </span>
+              </div>
+              <div>
               <input
                 type="checkbox"
                 className={style.cbRound}
@@ -131,24 +127,88 @@ export default function Form() {
                 onChange={(e) => setRsvp(!e.target.checked)}
               />
               <span className={style.formSpan}> No, perdón! </span>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  className={style.cbRound}
+                  checked={plusOne}
+                  onChange={(e) => setPlusOne(e.target.checked)}
+                />
+                <span className={style.formSpan}> Plus 1</span>
+              </div>
             </div>
             <h4 className={style.h4Div}>MENÚ</h4>
-            <div className={style.formDiv}>
+            <div className={style.formMenuDiv}>
+              <div className={style.soyPlusDiv}>
+                <div>
+                  <h5 className={style.h5Div}>Soy...</h5>
+                  <div>
+                    <input
+                      type="checkbox"
+                      className={style.cbRound}
+                      checked={vegan}
+                      onChange={(e) => setVegan(e.target.checked)}
+                    />
+                    <span className={style.formSpan}> Veganx</span>
+                  </div>
+                  <div>
+                    <input
+                      type="checkbox"
+                      className={style.cbRound}
+                      checked={vegetarian}
+                      onChange={(e) => setVegetarian(e.target.checked)}
+                    />
+                    <span className={style.formSpan}> Vegetarianx</span>
+                  </div>
+                  <div>
+                    <input
+                      type="checkbox"
+                      className={style.cbRound}
+                      checked={vegetarian}
+                      onChange={(e) => setVegetarian(e.target.checked)}
+                    />
+                    <span className={style.formSpan}> Pesquetarianx</span>
+
+                  </div>
+                </div>
+              </div>
+              <div className={style.plus1Div}>
+                <h5 className={style.h5Div}>Plus 1</h5>
+                <input
+                  type="checkbox"
+                  className={style.cbRound}
+                  checked={vegan}
+                  onChange={(e) => setVegan(e.target.checked)}
+                />
+                <span className={style.formSpan}> Veganx</span>
+                <br />
+                <input
+                  type="checkbox"
+                  className={style.cbRound}
+                  checked={vegetarian}
+                  onChange={(e) => setVegetarian(e.target.checked)}
+                />
+                <span className={style.formSpan}> Vegetarianx</span>
+                <br />
+                <input
+                  type="checkbox"
+                  className={style.cbRound}
+                  checked={vegetarian}
+                  onChange={(e) => setVegetarian(e.target.checked)}
+                />
+                <span className={style.formSpan}> Pesquetarianx</span>
+              </div>
+            </div>
+            <div>
+              <h4 className={style.h4Div}>ALERGIAS</h4>
               <input
-                type="checkbox"
-                className={style.cbRound}
-                checked={vegan}
-                onChange={(e) => setVegan(e.target.checked)}
+                type="text"
+                placeholder="Tengo/tenemos alergia a..."
+                className={style.inputPill}
+                value={name}
+                onChange={(e) => setName(e.target.value)}
               />
-              <span className={style.formSpan}> Veganx</span>
-              <br />
-              <input
-                type="checkbox"
-                className={style.cbRound}
-                checked={vegetarian}
-                onChange={(e) => setVegetarian(e.target.checked)}
-              />
-              <span className={style.formSpan}> Vegetarianx</span>
             </div>
           </form>
           <button type="submit" className={style.smallButton} onClick={handleSubmit}>
