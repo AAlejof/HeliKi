@@ -5,6 +5,7 @@ import axios from 'axios';
 import Navbar from './components/Navbar/Navbar';
 import Landing from './components/Landing/Landing'
 import Home from './components/Home/Home'
+import HomeDeutsch from './components/Home/HomeDeutsch';
 import Tips from './components/Tips/Tips'
 import Admin from './components/Admin/Admin'
 import Footer from './components/Footer/Footer'
@@ -19,6 +20,7 @@ function App() {
   const boolAddComponent =
   pathname === '/'     ||
   pathname === '/home' ||
+  pathname === '/home/de' ||
   pathname === '/tips' ||
   pathname === '/admin';
 
@@ -30,6 +32,7 @@ function App() {
         <Routes>
           <Route path={'/'} element={<Landing/>}/>
           <Route path={'/home'} element={<Home/>}/>
+          <Route path={'/home/de'} element={<HomeDeutsch/>}/>
           <Route path={'/tips'} element={<Tips/>}/>
           <Route path={'/admin'} element={<Admin/>}/>
         </Routes>  
