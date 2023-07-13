@@ -141,8 +141,7 @@ export default function Form() {
                 />
                 <span className={style.formSpan}> Plus 1</span>
               </div>
-            </div>
-            <h4 className={style.h4Div}>MENÚ</h4>
+            </div>            
             <div className={style.formMenuDiv}>
               <div className={style.soyPlusDiv}>
                 <div>
@@ -199,7 +198,7 @@ export default function Form() {
                   type="checkbox"
                   className={style.cbRound}
                   checked={vegetarian}
-                  onChange={(e) => setVegetarian(e.target.checked)}
+                  onChange={(e) => setPescetarian(e.target.checked)}
                 />
                 <span className={style.formSpan}> Pesquetarianx</span>
               </div>
