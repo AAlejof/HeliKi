@@ -7,7 +7,7 @@ const Landing = () => {
         <>
             <div className={style.landingDiv}>
                 
-                <p className={style.pLandingDiv}>DEUTSCH</p>
+                <p className={style.pLandingDiv}><Link to='/home/de'>DEUTSCH</Link></p>
                 <p className={style.pLandingDiv}><Link to='/home'>ESPAÑOL</Link></p>
                 <p className={style.pLandingDiv}>한국어</p>
             </div>
