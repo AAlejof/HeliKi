@@ -32,9 +32,11 @@ router.post("/", async (req, res) => {
     pescetarian: req.body.pescetarian,
     alergies: req.body.alergies
   };
+
   let collection = await db.collection("guests");
   let result = await collection.insertOne(newDocument);
-  res.send(result).status(204);
+
+  res.send(result).status(201);
 });
 
 // This section will help you update a guest by id.
@@ -43,11 +45,13 @@ router.patch("/:id", async (req, res) => {
   const updates =  {
     $set: {
         name: req.body.name,
-        plusOne: req.body.position,
-        rsvp: req.body.position,
-        vegan: req.body.level,
-        vegetarian: req.body.level
-    }
+        plusOne: req.body.plusOne,
+        rsvp: req.body.rsvp,
+        vegan: req.body.vegan, 
+        vegetarian: req.body.vegetarian,
+        pescetarian: req.body.pescetarian,
+        alergies: req.body.alergies
+    } 
   };
 
   let collection = await db.collection("guests");
