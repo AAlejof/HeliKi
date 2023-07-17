@@ -49,7 +49,7 @@ const Admin = () => {
           </td>
         ) : (
           <td>{!guest.rsvp ? <i class="fa-solid fa-xmark fa-xl"></i> : guest.vegan ? <i class="fa-solid fa-seedling"></i> : guest.vegetarian ? <i class="fa-solid fa-carrot fa-xl"></i> : guest.pescetarian ? <i class="fa-solid fa-fish"></i> : <i class="fa-solid fa-drumstick-bite fa-xl"></i>}</td>
-        )) : <i class="fa-solid fa-xmark fa-xl"></i>}
+        )) : <td><i class="fa-solid fa-xmark fa-xl"></i></td> }
         <td>{guest?.alergies}</td>
       </tr>
     ));
@@ -85,7 +85,7 @@ const Admin = () => {
                             <th><i class="fa-solid fa-user-plus fa-xl"></i></th>
                             <th><i class="fa-solid fa-comment-medical"></i></th>
                         </thead>
-                        <tbody>
+                        <tbody >
                             {tbody}
                         </tbody>
                     </table>
