@@ -1,93 +1,102 @@
 import style from './Admin.module.css';
-// import { Link } from 'react-router-dom';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import Form from '../Form/Form';
 
 const Admin = () => {
 
-    const handleSubmit = () => {
+    const [guests, setGuests] = useState([]);
 
-    }
+    useEffect(() => {
+        async function getGuests() {
+            const response = await fetch(`http://localhost:5050/guests/`);
 
-    return(
+            if (!response.ok) {
+                const message = `An error occurred: ${response.statusText}`;
+                window.alert(message);
+                return;
+            }
+
+            const guests = await response.json();
+            setGuests(guests);
+        }
+
+        getGuests();
+
+        return;
+    }, [guests.length]);
+
+    const totalGuests = guests.reduce((acc, guest) => {
+        if (guest.rsvp) {
+            return acc + (guest.plusOne.rsvp ? 2 : 1);
+        }
+        return acc;
+    }, 0);
+
+    const totalVegans = guests.filter(guest => guest.vegan).length;
+    const totalVegetarians = guests.filter(guest => guest.vegetarian).length;
+    const totalPescetarians = guests.filter(guest => guest.pescetarian).length;
+    
+    const tbody = guests
+    .map((guest, index) => (
+      <tr key={index} className={style.guestsIcons}>
+        <td>{guest?.name}</td>
+        <td>{guest.rsvp ? <i class="fa-solid fa-check fa-xl"></i> : <i class="fa-solid fa-xmark fa-xl"></i>}</td>
+        <td>{guest.rsvp ? (guest.vegan ? <i class="fa-solid fa-seedling"></i> : guest.vegetarian ? <i class="fa-solid fa-carrot fa-xl"></i> : guest.pescetarian ? <i class="fa-solid fa-fish"></i> : <i class="fa-solid fa-drumstick-bite fa-xl"></i>) : <i class="fa-solid fa-xmark fa-xl"></i>}</td>
+        {guest.plusOne.rsvp ? (guest.plusOne ? (
+          <td>
+            {guest.plusOne.rsvp ? <i class="fa-solid fa-check fa-xl"></i> : <i class="fa-solid fa-xmark fa-xl"></i>}
+            {guest.plusOne.vegan ? <i class="fa-solid fa-seedling"></i> : guest.plusOne.vegetarian ? <i class="fa-solid fa-carrot fa-xl"></i> : guest.plusOne.pescetarian ? <i class="fa-solid fa-fish"></i> : <i class="fa-solid fa-drumstick-bite fa-xl"></i>}
+          </td>
+        ) : (
+          <td>{!guest.rsvp ? <i class="fa-solid fa-xmark fa-xl"></i> : guest.vegan ? <i class="fa-solid fa-seedling"></i> : guest.vegetarian ? <i class="fa-solid fa-carrot fa-xl"></i> : guest.pescetarian ? <i class="fa-solid fa-fish"></i> : <i class="fa-solid fa-drumstick-bite fa-xl"></i>}</td>
+        )) : <i class="fa-solid fa-xmark fa-xl"></i>}
+        <td>{guest?.alergies}</td>
+      </tr>
+    ));
+  
+  
+  
+  
+
+
+    return (
         <>
             <div className={style.dashboardDiv}>
                 <h3 className={style.h3Dashboard}>
-                Dashboard
-                </h3> 
+                    Dashboard
+                </h3>
                 <div className={style.guestsDiv}>
                     <div>
                         <h4 className={style.h4Dashboard}>Resumen/Summary</h4>
                         <div className={style.summaryDiv}>
-                            <p>Total guests: 2</p>
-                            <p>Total vegetarians: 0</p>
-                            <p>Total vegans: 1</p>
-                            <p>Not attending: 1</p>
+                            <p>Total guests: {totalGuests}</p>
+                            <p>Total vegetarians: {totalVegetarians}</p>
+                            <p>Total vegans: {totalVegans}</p>
+                            <p>Total pescetarians: {totalPescetarians}</p>
+                            <p>Not attending: {guests.filter(guest => !guest.rsvp).length}</p>
                         </div>
                     </div>
-                    <h4 className={style.h4Dashboard}>Invitad@s/Guests</h4> 
+                    <h4 className={style.h4Dashboard}>Invitad@s/Guests</h4>
                     <table>
                         <thead className={style.guestsIcons}>
                             <th><i class="fa-regular fa-user fa-xl"></i></th>
-                            <th><i class="fa-regular fa-envelope fa-xl"></i></th>
                             <th><i class="fa-regular fa-calendar-check fa-xl"></i></th>
                             <th><i class="fa-solid fa-utensils fa-xl"></i></th>
                             <th><i class="fa-solid fa-user-plus fa-xl"></i></th>
+                            <th><i class="fa-solid fa-comment-medical"></i></th>
                         </thead>
-                        <tbody >
-                            <tr className={style.guestsIcons}>
-                                <td>Ale</td>
-                                <td><i class="fa-regular fa-eye fa-xl"></i></td>
-                                <td><i class="fa-solid fa-check fa-xl"></i></td>
-                                <td><i class="fa-solid fa-carrot fa-xl"></i></td>
-                                <td><i class="fa-solid fa-check fa-xl"></i></td>
-                            </tr>
-                            <tr className={style.guestsIcons}>
-                                <td>Nati</td>
-                                <td><i class="fa-regular fa-eye fa-xl"></i></td>
-                                <td><i class="fa-solid fa-check fa-xl"></i></td>
-                                <td><i class="fa-solid fa-drumstick-bite fa-xl"></i></td>
-                                <td><i class="fa-solid fa-xmark fa-xl"></i></td>
-                            </tr>
-                            <tr className={style.guestsIcons}>
-                                <td>Buch</td>
-                                <td><i class="fa-regular fa-eye fa-xl"></i></td>
-                                <td><i class="fa-solid fa-xmark fa-xl"></i></td>
-                                <td><i class="fa-solid fa-drumstick-bite fa-xl"></i></td>
-                                <td><i class="fa-solid fa-xmark fa-xl"></i></td>
-                            </tr>
+                        <tbody>
+                            {tbody}
                         </tbody>
                     </table>
                 </div>
-                <div className={style.dashboardDiv}>
-                    <h4 className={style.h4Dashboard}>Agregar/Add</h4>
-            <div>
-                <div className={style.rsvpDiv}>
-                    <form className={style.rsvpForm} onSubmit={(e) => handleSubmit(e)}>
-                        <div>
-                            <input type="text" Placeholder='Nombre/s' className={style.inputPill}/>
-                        </div>
-                            <h4  className={style.h4Div}>ASISTENCIA</h4>
-                        <div className={style.formDiv}>
-                            <span className={style.formSpan}><i class="fa-regular fa-calendar-check fa-xl"></i></span><input type="checkbox" className={style.cbRound}/>
-                            <span className={style.formSpan}> <i class="fa-solid fa-user-plus fa-xl"></i></span><input type="checkbox" className={style.cbRound}/> 
-                            <br/>
-                            <span className={style.formSpan}> <i class="fa-solid fa-xmark fa-xl"></i></span><input type="checkbox" className={style.cbRound}/>
-                        </div>
-                            <h4  className={style.h4Div}>MENÚ</h4>
-                        <div className={style.formDiv}>
-                            <input type="checkbox" className={style.cbRound}/> <span className={style.formSpan}> Veganx</span>
-                            <br/>
-                            <input type="checkbox" className={style.cbRound}/><span className={style.formSpan}> Vegetarianx</span>
-                        </div>
-                    </form>
-                    <button className={style.smallButton}><i class="fa-regular fa-user fa-xl"></i></button>
-                   </div>
+
+                <div><Form /></div>
             </div>
-                </div>
-            </div>
-        
+
         </>
     )
 }
+
 
 export default Admin;
