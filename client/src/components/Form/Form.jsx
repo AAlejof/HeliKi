@@ -1,77 +1,33 @@
-// import style from './Form.module.css';
-// import image from '../../assets/spinningWorld.gif';
-// import React, { useState } from 'react';
-// //import { useDispatch, useSelector } from 'react-redux';
-// //import {} from '../../redux/actions/actions';
-// //import Validate from './Validations';
-// //import swal from 'sweetalert';
-// //import { useNavigate, Link } from 'react-router-dom';
-
-
-// export default function Form() {
-
-//     const handleSubmit = async () => {
-
-//     }
-
-//     return(
-//         <>
-//             <div>
-//                 <div className={style.rsvpDiv}>
-//                     <h3 className={style.h3Div}>RSVP</h3>
-//                     <form className={style.rsvpForm} onSubmit={(e) => handleSubmit(e)}>
-//                         <div>
-//                             <input type="text" Placeholder='Nombre/s' className={style.inputPill}/>
-//                         </div>
-//                             <h4  className={style.h4Div}>ASISTENCIA</h4>
-//                         <div className={style.formDiv}>
-//                             <input type="checkbox" className={style.cbRound}/><span className={style.formSpan}> Sí, obvio! </span>
-//                             <input type="checkbox" className={style.cbRound}/> <span className={style.formSpan}> Plus 1</span>
-//                             <br/>
-//                             <input type="checkbox" className={style.cbRound}/><span className={style.formSpan}> No, perdón! </span>
-//                         </div>
-//                             <h4  className={style.h4Div}>MENÚ</h4>
-//                         <div className={style.formDiv}>
-//                             <input type="checkbox" className={style.cbRound}/> <span className={style.formSpan}> Veganx</span>
-//                             <br/>
-//                             <input type="checkbox" className={style.cbRound}/><span className={style.formSpan}> Vegetarianx</span>
-//                         </div>
-//                     </form>
-//                     <button className={style.smallButton}>ENVIAR</button>
-//                     <img src={image} alt="spinningWorld" className={style.imgWorld}/>
-//                 </div>
-//             </div>
-//         </>
-//     )
-
-// };
-
 import React, { useState } from 'react';
 import style from './Form.module.css';
 import image from '../../assets/spinningWorld.gif';
+import swal from "sweetalert";
 
 export default function Form() {
-  const [name, setName] = useState('');
-  const [plusOne, setPlusOne] = useState(false);
-  const [rsvp, setRsvp] = useState(true);
-  const [vegan, setVegan] = useState(false);
-  const [vegetarian, setVegetarian] = useState(false);
-  const [pescetarian, setPescetarian] = useState(false);
-  const [alergies, setAlergies] = useState('');
+  const [input, setInput] = useState({
+    guest: {
+      name: '',
+      rsvp: false,
+      vegan: false,
+      vegetarian: false,
+      pescetarian: false,
+      alergies: '',
+      plusOne: {
+        rsvp: false,
+        vegan: false,
+        vegetarian: false,
+        pescetarian: false,
+      },
+    },
+  });
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    const guestData = {
-      name: name,
-      plusOne: plusOne,
-      rsvp: rsvp,
-      vegan: vegan,
-      vegetarian: vegetarian,
-      pescetarian: pescetarian,
-      alergies: alergies
-    };
-
+    const guestData = input.guest;
+    if (input.plusOne) {
+      guestData.plusOne = input.plusOne;
+    }
     try {
       const response = await fetch('http://localhost:5050/guests', {
         method: 'POST',
@@ -80,21 +36,28 @@ export default function Form() {
         },
         body: JSON.stringify(guestData),
       });
-
       if (response.ok) {
-        // Handle success
         console.log('Guest created successfully');
-        // You can perform any additional actions here, like showing a success message or redirecting to another page
+        swal({
+          icon: 'success',
+        });
       } else {
-        // Handle error
         console.log('Failed to create guest');
-        // You can perform any additional actions here, like showing an error message
+        swal({
+          icon: 'warning',
+        });
       }
     } catch (error) {
       console.error('Error:', error);
-      // Handle error
     }
   };
+
+  const handleNoName = (e) => {
+    swal({
+      icon: 'warning',
+    });
+  }
+
 
   return (
     <>
@@ -108,8 +71,14 @@ export default function Form() {
                 type="text"
                 placeholder="Nombre/s"
                 className={style.inputPill}
-                value={name}
-                onChange={(e) => setName(e.target.value)}
+                value={input.guest.name}
+                onChange={(e) => setInput({
+                  ...input,
+                  guest: {
+                    ...input.guest,
+                    name: e.target.value,
+                  },
+                })}
               />
             </div>
             <h4 className={style.h4Div}>ASISTENCIA</h4>
@@ -118,40 +87,66 @@ export default function Form() {
                 <input
                   type="checkbox"
                   className={style.cbRound}
-                  checked={rsvp}
-                  onChange={(e) => setRsvp(e.target.checked)}
+                  checked={input.guest.rsvp}
+                  onChange={(e) => setInput({
+                    ...input,
+                    guest: {
+                      ...input.guest,
+                      rsvp: e.target.checked,
+                    },
+                  })}
+
                 />
                 <span className={style.formSpan}> Sí, obvio! </span>
-              </div>
-              <div>
-              <input
-                type="checkbox"
-                className={style.cbRound}
-                checked={!rsvp}
-                onChange={(e) => setRsvp(!e.target.checked)}
-              />
-              <span className={style.formSpan}> No, perdón! </span>
               </div>
               <div>
                 <input
                   type="checkbox"
                   className={style.cbRound}
-                  checked={plusOne}
-                  onChange={(e) => setPlusOne(e.target.checked)}
+                  checked={!input.guest.rsvp}
+                  onChange={(e) => setInput({
+                    ...input,
+                    guest: {
+                      ...input.guest,
+                      rsvp: !e.target.checked,
+                    },
+                  })}
+                />
+                <span className={style.formSpan}> No, perdón! </span>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  className={style.cbRound}
+                  checked={input.plusOne?.rsvp}
+                  onChange={(e) => setInput({
+                    ...input,
+                    plusOne: {
+                      ...input.plusOne,
+                      rsvp: e.target.checked,
+                    },
+                  })}
+
                 />
                 <span className={style.formSpan}> Plus 1</span>
               </div>
-            </div>            
+            </div>
             <div className={style.formMenuDiv}>
               <div className={style.soyPlusDiv}>
-                <div>
+                <div >
                   <h5 className={style.h5Div}>Soy...</h5>
                   <div>
                     <input
                       type="checkbox"
                       className={style.cbRound}
-                      checked={vegan}
-                      onChange={(e) => setVegan(e.target.checked)}
+                      checked={input.guest.vegan}
+                      onChange={(e) => setInput({
+                        ...input,
+                        guest: {
+                          ...input.guest,
+                          vegan: e.target.checked,
+                        },
+                      })}
                     />
                     <span className={style.formSpan}> Veganx</span>
                   </div>
@@ -159,8 +154,15 @@ export default function Form() {
                     <input
                       type="checkbox"
                       className={style.cbRound}
-                      checked={vegetarian}
-                      onChange={(e) => setVegetarian(e.target.checked)}
+                      checked={input.guest.vegetarian}
+                      onChange={(e) => setInput({
+                        ...input,
+                        guest: {
+                          ...input.guest,
+                          vegetarian: e.target.checked,
+                        },
+                      })}
+
                     />
                     <span className={style.formSpan}> Vegetarianx</span>
                   </div>
@@ -168,8 +170,15 @@ export default function Form() {
                     <input
                       type="checkbox"
                       className={style.cbRound}
-                      checked={vegetarian}
-                      onChange={(e) => setVegetarian(e.target.checked)}
+                      checked={input.guest.pescetarian}
+                      onChange={(e) => setInput({
+                        ...input,
+                        guest: {
+                          ...input.guest,
+                          pescetarian: e.target.checked,
+                        },
+                      })}
+
                     />
                     <span className={style.formSpan}> Pesquetarianx</span>
 
@@ -181,24 +190,45 @@ export default function Form() {
                 <input
                   type="checkbox"
                   className={style.cbRound}
-                  checked={vegan}
-                  onChange={(e) => setVegan(e.target.checked)}
+                  checked={input.plusOne?.vegan}
+                  onChange={(e) => setInput({
+                    ...input,
+                    plusOne: {
+                      ...input.plusOne,
+                      vegan: e.target.checked,
+                    },
+                  })}
+
                 />
                 <span className={style.formSpan}> Veganx</span>
                 <br />
                 <input
                   type="checkbox"
                   className={style.cbRound}
-                  checked={vegetarian}
-                  onChange={(e) => setVegetarian(e.target.checked)}
+                  checked={input.plusOne?.vegetarian}
+                  onChange={(e) => setInput({
+                    ...input,
+                    plusOne: {
+                      ...input.plusOne,
+                      vegetarian: e.target.checked,
+                    },
+                  })}
+
                 />
                 <span className={style.formSpan}> Vegetarianx</span>
                 <br />
                 <input
                   type="checkbox"
                   className={style.cbRound}
-                  checked={vegetarian}
-                  onChange={(e) => setPescetarian(e.target.checked)}
+                  checked={input.plusOne?.pescetarian}
+                  onChange={(e) => setInput({
+                    ...input,
+                    plusOne: {
+                      ...input.plusOne,
+                      pescetarian: e.target.checked,
+                    },
+                  })}
+
                 />
                 <span className={style.formSpan}> Pesquetarianx</span>
               </div>
@@ -209,14 +239,28 @@ export default function Form() {
                 type="text"
                 placeholder="Tengo/tenemos alergia a..."
                 className={style.inputPill}
-                value={alergies}
-                onChange={(e) => setAlergies(e.target.value)}
+                value={input.guest.alergies}
+                onChange={(e) => setInput({
+                  ...input,
+                  guest: {
+                    ...input.guest,
+                    alergies: e.target.value,
+                  },
+                })}
+
               />
+
             </div>
           </form>
-          <button type="submit" className={style.smallButton} onClick={handleSubmit}>
-            ENVIAR
-          </button>
+          {
+            (input.guest.name) ?
+              <button type="submit" className={style.smallButton} onClick={handleSubmit}>
+                ENVIAR
+              </button> :
+              <button type="submit" className={style.smallButton} onClick={handleNoName}>
+                ENVIAR
+              </button>
+          }
           <img src={image} alt="spinningWorld" className={style.imgWorld} />
         </div>
       </div>
