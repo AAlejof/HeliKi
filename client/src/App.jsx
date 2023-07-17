@@ -6,6 +6,7 @@ import Navbar from './components/Navbar/Navbar';
 import Landing from './components/Landing/Landing'
 import Home from './components/Home/Home'
 import HomeDeutsch from './components/Home/HomeDeutsch';
+import HomeKorean from './components/Home/HomeKorean';
 import Tips from './components/Tips/Tips'
 import Admin from './components/Admin/Admin'
 import Footer from './components/Footer/Footer'
@@ -21,6 +22,7 @@ function App() {
   pathname === '/'     ||
   pathname === '/home' ||
   pathname === '/home/de' ||
+  pathname === '/home/ko' ||
   pathname === '/tips' ||
   pathname === '/admin';
 
@@ -33,6 +35,7 @@ function App() {
           <Route path={'/'} element={<Landing/>}/>
           <Route path={'/home'} element={<Home/>}/>
           <Route path={'/home/de'} element={<HomeDeutsch/>}/>
+          <Route path={'/home/ko'} element={<HomeKorean/>}/>
           <Route path={'/tips'} element={<Tips/>}/>
           <Route path={'/admin'} element={<Admin/>}/>
         </Routes>  
