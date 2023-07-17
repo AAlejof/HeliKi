@@ -39,7 +39,7 @@ const Tips = () => {
 						</p>
 					</div>
 					{(showTips === true) ?
-						<div>
+						<div className={style.secAdvDiv}>
 							<ol>
 								<li>Lass deine Wertsachen / Rucksack / Handtasche auch in Bars und Restaurants nicht unbeaufsichtigt.</li>
 								<li>Nutze dein Handy am besten nicht an Straßenecken (Kurven) oder in der U-Bahn</li>
@@ -56,14 +56,14 @@ const Tips = () => {
 					</p>
 				</div>
 				{(showTransport === true) ?
-					<div>
+					<div className={style.secAdvDiv}>
 						<ul>
-							<li>Uber</li>
-							<li>Taxi: Nur mit Bargeld. Nenne immer die Straßenecke zu der du möchtest (2 Straßennamen)</li>
-							<li>SUBE (Transportkarte)</li>
+							<li><b>Uber</b></li>
+							<li><b>Taxi</b>: Nur mit Bargeld. Nenne immer die Straßenecke zu der du möchtest (2 Straßennamen)</li>
+							<li><b>SUBE</b> (Transportkarte)</li>
 							<li>Du erhältst eine SUBE-Karte (wiederaufladbare ÖPNV-Karte)im Kiosk oder in den U-Bahn-Stationen. Damit kannst du alle Busse und die U-Bahn nutzen.</li>
-							<li>Subte ( U-Bahn): Das U-Bahn Netz ist jedoch etwas begrenzt. Nutze sie am besten nur, wenn sich eine Haltestelle in nächster Nähe befindet.</li>
-							<li>Bus: Wenn du den Bus mit der richtigen Busnummer siehst, musst du ihn an der Bushaltestelle per Handzeichen zu dir rufen. Manchmal sind dort jedoch auch längere Warteschlangen.</li>
+							<li><b>Subte ( U-Bahn):</b> Das U-Bahn Netz ist jedoch etwas begrenzt. Nutze sie am besten nur, wenn sich eine Haltestelle in nächster Nähe befindet.</li>
+							<li><b>Bus:</b> Wenn du den Bus mit der richtigen Busnummer siehst, musst du ihn an der Bushaltestelle per Handzeichen zu dir rufen. Manchmal sind dort jedoch auch längere Warteschlangen.</li>
 						</ul>
 					</div>
 					: null}
@@ -75,13 +75,13 @@ const Tips = () => {
 					</p>
 				</div>
 				{(showMap === true) ?
-					<div>
-						<p>Hier sind für dich ein paar Tipps, was du in den unterschiedlichen Stadtteilen unternehmen kannst.</p>
+					<div className={style.mapDiv}>
+						<p className={style.mapP}>Hier sind für dich ein paar Tipps, was du in den unterschiedlichen Stadtteilen unternehmen kannst.</p>
 						<Link to='https://mapa.buenosaires.gob.ar/mapas/?lat=-34.623744&lng=-58.434734&zl=13&modo=transporte' >
 							<button className={style.smallButton}><i class="fa-solid fa-map-location-dot fa-xl"></i></button>
 						</Link>
 						<img src="" alt="" />
-						<div>
+						<div className={style.hoodsDiv}>
 							<h5>Palermo:</h5>
 							<p>Das größte und gleichzeitig auch das modernste Viertel in Buenos Aires. Besonders zum Ausgehen ist Palermo perfekt.</p>
 							<h6>UNSERE TIPPS:</h6>
@@ -91,7 +91,7 @@ const Tips = () => {
 								<li>Sehenswertes: <br />- Street Art <br />- La Plaza Serrano - mit einem schönen Markt am Wochenende <br />- Jardín Botánico <br />- Jardín Japonés <br />- Los Bosques de Palermo <br />- El Rosedal <br />- El Planetario</li>
 							</ul>
 						</div>
-						<div>
+						<div className={style.hoodsDiv}>
 							<h5>Recoleta:</h5>
 							<p>Hier findet ihr eine menge Kunst & Kultur.</p>
 							<h6>UNSERE TIPPS:</h6>
@@ -103,7 +103,7 @@ const Tips = () => {
 								<li>Museo Malba</li>
 							</ul>
 						</div>
-						<div>
+						<div className={style.hoodsDiv}>
 							<h5>San Nicolás & Monserrat:</h5>
 							<p>Gilt als historisches und politisches Zentrum von Buenos Aires.</p>
 							<h6>UNSERE TIPPS:</h6>
@@ -115,7 +115,7 @@ const Tips = () => {
 								<li>Centro Cultural Kirchner (CCK)</li>
 							</ul>
 						</div>
-						<div>
+						<div className={style.hoodsDiv}>
 							<h5>San Telmo:</h5>
 							<p>Ein Stadtteil voller Kunst, Kultur und Antiquitätenläden.</p>
 							<h6>UNSERE TIPPS:</h6>
@@ -127,7 +127,7 @@ const Tips = () => {
 								<li>Museo Histórico Nacional</li>
 							</ul>
 						</div>
-						<div>
+						<div className={style.hoodsDiv}>
 							<h5>Puerto Madero:</h5>
 							<p>Puerto Madero lädt vor allem zu einem Spaziergang entlang der Flusses oder der großen Fußgängerzone ein. <br />Fun Fact: Puerto Madero ist ein Viertel, das dem weiblichen Geschlecht eine besondere Ehre erweist. Die Straßen sind nach Frauen aus Kunst, Wissenschaft, Politik und Kultur benannt. Außerdem gilt die Brücke ,,Puente de la Mujer” als eine Hommage an die Frauen.</p>
 							<h6>UNSERE TIPPS:</h6>
@@ -139,17 +139,17 @@ const Tips = () => {
 								<li>Costanera Sur food trucks</li>
 								<li>Casino</li>
 							</ul>
-</div>
-							<div>
-								<h5>La Boca:</h5>
-								<p>Fußball und bunte Gassen.</p>
-								<h6>UNSERE TIPPS:</h6>
-								<ul>
-									<li>Caminito (Gasse der bunten Wellblechhütten)</li>
-									<li>Estadio Boca Juniors (Fußballstadion)</li>
-								</ul>
-								<p>Achtung: Nach 16:00 solltet ihr euch nicht mehr in diesem Viertel aufhalten, da es dann zu gefährlich ist.</p>
-							</div>
+						</div>
+						<div className={style.hoodsDiv}>
+							<h5>La Boca:</h5>
+							<p>Fußball und bunte Gassen.</p>
+							<h6>UNSERE TIPPS:</h6>
+							<ul>
+								<li>Caminito (Gasse der bunten Wellblechhütten)</li>
+								<li>Estadio Boca Juniors (Fußballstadion)</li>
+							</ul>
+							<p>Achtung: Nach 16:00 solltet ihr euch nicht mehr in diesem Viertel aufhalten, da es dann zu gefährlich ist.</p>
+						</div>
 					</div>
 					: null}
 				<div className={style.tipsDiv}>
@@ -160,7 +160,7 @@ const Tips = () => {
 					</p>
 				</div>
 				{(showSA === true) ?
-					<div>
+					<div className={style.travelDiv}>
 						<p>Reisetipps für Argentinien:</p>
 						<div>
 							<h5>Süden</h5>

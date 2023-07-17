@@ -1,13 +1,13 @@
 /* ---------MOBILE--------- */
 
-.sectionsDiv{
-    margin-top: 150px;
+.sectionsDiv {
+	margin-top: 150px;
 }
 
 .tipsDiv {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 }
 
 .h3Div {
@@ -23,20 +23,21 @@
 	width: 93vw;
 }
 
-.faDiv{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    color: #e66a6a;
+.faDiv {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	color: #e66a6a;
 	border-bottom: 1px solid #f19d9d;
 	padding: 1rem;
-	width: 7vw; 
-    margin-top: 11px;
-    margin-bottom: 11px;
+	width: 7vw;
+	margin-top: 11px;
+	margin-bottom: 11px;
 }
 
 .smallButton {
-	margin-bottom: 7%;
+	margin-top: 5%;
+	margin-bottom: 10%;
 	width: 100px;
 	font-family: 'Source Sans Pro';
 	font-style: normal;
@@ -55,10 +56,157 @@
 	cursor: pointer;
 }
 
+.secAdvDiv {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.secAdvDiv ol {
+	color: #4E4E4E;
+	font-family: Poppins;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	text-align: left;
+	width: 290px;
+}
+
+.secAdvDiv ul {
+	color: #4E4E4E;
+	font-family: Poppins;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	text-align: left;
+	width: 290px;
+}
+
+.mapDiv {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.mapP {
+	width: 291px;
+	height: 85px;
+	color: #868686;
+	font-family: Poppins;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	text-align: left;
+}
+
+.hoodsDiv {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	width: 291px;
+}
+
+.hoodsDiv h5 {
+	color: #4E4E4E;
+	font-family: Poppins;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 800;
+	line-height: normal;
+	text-align: left;
+	margin-bottom: 0;
+}
+
+.hoodsDiv h6 {
+	color: #4E4E4E;
+	font-family: Poppins;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	text-align: left;
+	margin: 0;
+}
+
+.hoodsDiv p {
+	color: #4E4E4E;
+	font-family: Poppins;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	text-align: left;
+	margin: 0;
+}
+
+.hoodsDiv ul {
+	color: #4E4E4E;
+	font-family: Poppins;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	text-align: left;
+	margin: 0;
+}
+
+.travelDiv {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: left;
+	width: 100%;
+}
+
+.travelDiv p {
+	color: #4E4E4E;
+	font-family: Poppins;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	text-align: left;
+	margin: 0;
+	padding-left: 50px;
+}
+
+.travelDiv h5 {
+	color: #4E4E4E;
+	font-family: Poppins;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 800;
+	line-height: normal;
+	padding-left: 50px;
+	text-align: left;
+	margin-bottom: 0;
+	
+}
+
+.travelDiv ul{
+	color: #4E4E4E;
+	font-family: Poppins;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	text-align: left;
+	margin: 0;
+	list-style: none;
+	padding-left: 50px;
+}
+
 /* ---------- tablet & desktop--------- */
 
 @media (min-width: 452px) {
-	.sectionsDiv{
+	.sectionsDiv {
 		margin-top: 15vh;
 	}
 
@@ -67,13 +215,13 @@
 		justify-content: left;
 
 	}
-	
+
 	.h3Div {
 		font-family: 'Libre Baskerville';
 		font-style: normal;
 		font-weight: 700;
 		font-size: 14px;
-		text-align:center;
+		text-align: center;
 		letter-spacing: 0.5em;
 		color: #e66a6a;
 		border-bottom: 1px solid #f19d9d;
@@ -83,8 +231,8 @@
 		margin-bottom: 11px;
 		cursor: pointer;
 	}
-	
-	.faDiv{
+
+	.faDiv {
 		position: absolute;
 		right: 20vw;
 		display: flex;
