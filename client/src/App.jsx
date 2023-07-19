@@ -12,7 +12,7 @@ import Admin from './components/Admin/Admin'
 import Footer from './components/Footer/Footer'
 import './App.css';
 
-axios.defaults.baseURL = 'http://localhost:3001';
+axios.defaults.baseURL = 'https://heli-ki.vercel.app/';
 
 function App() {
   const location = useLocation();
