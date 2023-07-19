@@ -3,7 +3,7 @@ import style from './Form.module.css';
 import image from '../../assets/spinningWorld.gif';
 import swal from "sweetalert";
 
-export default function FormDeutsch() {
+export default function Form() {
     const [input, setInput] = useState({
         guest: {
             name: '',
@@ -59,17 +59,17 @@ export default function FormDeutsch() {
     }
 
 
-
     return (
         <>
             <div>
                 <div className={style.rsvpDiv}>
                     <h3 className={style.h3Div}>RSVP</h3>
-                    <p className={style.pPlease} >Für unsere Planung möchten wir euch bitte, die folgenden Felder auszufüllen und abzusenden.
-                        Bitte gebt uns bis zum …. 18. September Bescheid, ob ihr kommen könnt.</p>
+                    <p className={style.pPlease} >혹시 채식을 원하시는 분이 계시면 <br />
+                        아래 폼을 작성하여 참석여부와 함께<br />
+                        표시해 주시면 감사하겠습니다.</p>
                     <form className={style.rsvpForm} onSubmit={handleSubmit}>
                         <div>
-                            <input type="text" placeholder="Nombre/s" className={style.inputPill} value={input.guest.name}
+                            <input type="text" placeholder="이름" className={style.inputPill} value={input.guest.name}
                                 onChange={(e) => setInput({
                                     ...input,
                                     guest: {
@@ -79,7 +79,7 @@ export default function FormDeutsch() {
                                 })}
                             />
                         </div>
-                        <h4 className={style.h4Div}>ICH BIN DABEI!</h4>
+                        <h4 className={style.h4Div}>출석</h4>
                         <div className={style.formDiv}>
                             <div>
                                 <input type="checkbox" className={style.cbRound} checked={input.guest.rsvp}
@@ -91,7 +91,7 @@ export default function FormDeutsch() {
                                         },
                                     })}
                                 />
-                                <span className={style.formSpan}> Ja, na klar! </span>
+                                <span className={style.formSpan}> 참석 </span>
                             </div>
                             <div>
                                 <input type="checkbox" className={style.cbRound} checked={!input.guest.rsvp}
@@ -103,7 +103,7 @@ export default function FormDeutsch() {
                                         },
                                     })}
                                 />
-                                <span className={style.formSpan}> Leider nein </span>
+                                <span className={style.formSpan}> 참석 안함 </span>
                             </div>
                             <div>
                                 {(input.guest.rsvp) ?
@@ -130,8 +130,8 @@ export default function FormDeutsch() {
                         </div>
                         <div className={style.formMenuDiv}>
                             <div className={style.soyPlusDiv}>
-                                <div>
-                                    <h5 className={style.h5Div}>ICH BIN ...</h5>
+                                <div >
+                                    <h5 className={style.h5Div}>나는 ...</h5>
                                     <div>
                                         {(input.guest.rsvp) ? (
                                             <input type="checkbox" className={style.cbRound} checked={input.guest.vegan}
@@ -155,7 +155,7 @@ export default function FormDeutsch() {
                                                 disabled
                                             />
                                         )}
-                                        <span className={style.formSpan}> Vegan</span>
+                                        <span className={style.formSpan}> 비건</span>
                                     </div>
                                     <div>
                                         {(input.guest.rsvp) ? (
@@ -180,7 +180,7 @@ export default function FormDeutsch() {
                                                 disabled
                                             />
                                         )}
-                                        <span className={style.formSpan}> Vegetarisch</span>
+                                        <span className={style.formSpan}> 채식주의자</span>
                                     </div>
                                     <div>
                                         {(input.guest.rsvp) ? (
@@ -205,62 +205,59 @@ export default function FormDeutsch() {
                                                 disabled
                                             />
                                         )}
-                                        <span className={style.formSpan}> Pesquetarier</span>
-
+                                        <span className={style.formSpan}> 페스케테리안</span>
                                     </div>
                                 </div>
                             </div>
                             <div className={style.plus1Div}>
                                 <h5 className={style.h5Div}>Plus 1</h5>
-                                {
-                                    (input.plusOne?.rsvp) ? (
-                                        <input type="checkbox" className={style.cbRound} checked={input.plusOne?.vegan}
-                                            onChange={(e) => setInput({
-                                                ...input,
-                                                plusOne: {
-                                                    ...input.plusOne,
-                                                    vegan: e.target.checked,
-                                                },
-                                            })}
-                                        />) : (
-                                        <input type="checkbox" className={style.cbRound} checked={input.plusOne?.vegan}
-                                            onChange={(e) => setInput({
-                                                ...input,
-                                                plusOne: {
-                                                    ...input.plusOne,
-                                                    vegan: e.target.checked,
-                                                },
-                                            })}
-                                            disabled
-                                        />
-                                    )
+                                {(input.plusOne?.rsvp) ? (
+                                    <input type="checkbox" className={style.cbRound} checked={input.plusOne?.vegan}
+                                        onChange={(e) => setInput({
+                                            ...input,
+                                            plusOne: {
+                                                ...input.plusOne,
+                                                vegan: e.target.checked,
+                                            },
+                                        })}
+                                    />) : (
+                                    <input type="checkbox" className={style.cbRound} checked={input.plusOne?.vegan}
+                                        onChange={(e) => setInput({
+                                            ...input,
+                                            plusOne: {
+                                                ...input.plusOne,
+                                                vegan: e.target.checked,
+                                            },
+                                        })}
+                                        disabled
+                                    />
+                                )
                                 }
-                                <span className={style.formSpan}> Vegan</span>
+                                <span className={style.formSpan}> 비건</span>
                                 <br />
-                                {
-                                    (input.plusOne?.rsvp) ? (
-                                        <input type="checkbox" className={style.cbRound} checked={input.plusOne?.vegetarian}
-                                            onChange={(e) => setInput({
-                                                ...input,
-                                                plusOne: {
-                                                    ...input.plusOne,
-                                                    vegetarian: e.target.checked,
-                                                },
-                                            })}
-                                        />) : (
-                                        <input type="checkbox" className={style.cbRound} checked={input.plusOne?.vegetarian}
-                                            onChange={(e) => setInput({
-                                                ...input,
-                                                plusOne: {
-                                                    ...input.plusOne,
-                                                    vegetarian: e.target.checked,
-                                                },
-                                            })}
-                                            disabled
-                                        />
-                                    )
+                                {(input.plusOne?.rsvp) ? (
+                                    <input type="checkbox" className={style.cbRound} checked={input.plusOne?.vegetarian}
+                                        onChange={(e) => setInput({
+                                            ...input,
+                                            plusOne: {
+                                                ...input.plusOne,
+                                                vegetarian: e.target.checked,
+                                            },
+                                        })}
+                                    />) : (
+                                    <input type="checkbox" className={style.cbRound} checked={input.plusOne?.vegetarian}
+                                        onChange={(e) => setInput({
+                                            ...input,
+                                            plusOne: {
+                                                ...input.plusOne,
+                                                vegetarian: e.target.checked,
+                                            },
+                                        })}
+                                        disabled
+                                    />
+                                )
                                 }
-                                <span className={style.formSpan}> Vegetarisch</span>
+                                <span className={style.formSpan}> 채식주의자</span>
                                 <br />
                                 {
                                     (input.plusOne?.rsvp) ? (
@@ -285,14 +282,14 @@ export default function FormDeutsch() {
                                         />
                                     )
                                 }
-                                <span className={style.formSpan}> Pesquetarier</span>
+                                <span className={style.formSpan}> 페스케테리안</span>
                             </div>
                         </div>
                         <div>
-                            <h4 className={style.h4Div}>ALLERGIE</h4>
+                            <h4 className={style.h4Div}>알레르기</h4>
                             <input
                                 type="text"
-                                placeholder="Tengo/tenemos alergia a..."
+                                placeholder="저/저희는알레르기가 있습니다"
                                 className={style.inputPill}
                                 value={input.guest.alergies}
                                 onChange={(e) => setInput({
@@ -308,13 +305,13 @@ export default function FormDeutsch() {
                     {
                         (input.guest.name) ?
                             <button type="submit" className={style.smallButton} onClick={handleSubmit}>
-                                SENDEN
+                                보내기
                             </button> :
                             <button type="submit" className={style.smallButton} onClick={handleNoName}>
-                                SENDEN
+                                보내기
                             </button>
                     }
-                    <span className={style.formSpan}>Bitte vor dem Senden ausfüllen</span>
+                    <span className={style.formSpan}>보내기 전에 완료하십시오.</span>
                     <img src={image} alt="spinningWorld" className={style.imgWorld} />
                 </div>
             </div>
