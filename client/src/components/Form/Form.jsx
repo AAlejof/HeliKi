@@ -88,7 +88,6 @@ export default function Form() {
                       rsvp: e.target.checked,
                     },
                   })}
-
                 />
                 <span className={style.formSpan}> Sí, obvio! </span>
               </div>
@@ -154,7 +153,6 @@ export default function Form() {
                         disabled
                       />
                     )}
-
                     <span className={style.formSpan}> Veganx</span>
                   </div>
                   <div>
@@ -211,8 +209,7 @@ export default function Form() {
               </div>
               <div className={style.plus1Div}>
                 <h5 className={style.h5Div}>Plus 1</h5>
-                {
-                  (input.plusOne?.rsvp) ? (
+                {(input.plusOne?.rsvp) ? (
                     <input type="checkbox" className={style.cbRound} checked={input.plusOne?.vegan}
                       onChange={(e) => setInput({
                         ...input,
@@ -234,11 +231,9 @@ export default function Form() {
                     />
                   )
                 }
-
                 <span className={style.formSpan}> Veganx</span>
                 <br />
-                {
-                  (input.plusOne?.rsvp) ? (
+                {(input.plusOne?.rsvp) ? (
                     <input type="checkbox" className={style.cbRound} checked={input.plusOne?.vegetarian}
                       onChange={(e) => setInput({
                         ...input,
@@ -302,9 +297,7 @@ export default function Form() {
                     alergies: e.target.value,
                   },
                 })}
-
               />
-
             </div>
           </form>
           {
