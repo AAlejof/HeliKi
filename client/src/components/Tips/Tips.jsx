@@ -1,6 +1,7 @@
 import style from './Tips.module.css';
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
+import image from '../../assets/map.svg' 
 
 
 const Tips = () => {
@@ -80,7 +81,7 @@ const Tips = () => {
 						<Link to='https://mapa.buenosaires.gob.ar/mapas/?lat=-34.623744&lng=-58.434734&zl=13&modo=transporte' >
 							<button className={style.smallButton}><i class="fa-solid fa-map-location-dot fa-xl"></i></button>
 						</Link>
-						<img src="" alt="" />
+						<img className={style.map} src= {image} alt="bsasMap" />
 						<div className={style.hoodsDiv}>
 							<h5>Palermo:</h5>
 							<p>Das größte und gleichzeitig auch das modernste Viertel in Buenos Aires. Besonders zum Ausgehen ist Palermo perfekt.</p>

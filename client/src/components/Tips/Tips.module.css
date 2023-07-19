@@ -93,6 +93,12 @@
 	width: 100%;
 }
 
+.map{
+	width: 300px;
+	height: auto;
+	margin: 50px;
+}
+
 .mapP {
 	width: 291px;
 	height: 85px;
@@ -244,5 +250,11 @@
 		margin-top: 11px;
 		margin-bottom: 11px;
 		cursor: pointer;
+	}
+
+	.map{
+		width: 500px;
+		height: auto;
+		margin: 50px;
 	}
 }
