@@ -67,11 +67,7 @@ export default function Form() {
           <p className={style.pPlease} >Por favor, <br /> completar y enviar.</p>
           <form className={style.rsvpForm} onSubmit={handleSubmit}>
             <div>
-              <input
-                type="text"
-                placeholder="Nombre/s"
-                className={style.inputPill}
-                value={input.guest.name}
+              <input type="text" placeholder="Nombre/s" className={style.inputPill} value={input.guest.name}
                 onChange={(e) => setInput({
                   ...input,
                   guest: {
@@ -84,10 +80,7 @@ export default function Form() {
             <h4 className={style.h4Div}>ASISTENCIA</h4>
             <div className={style.formDiv}>
               <div>
-                <input
-                  type="checkbox"
-                  className={style.cbRound}
-                  checked={input.guest.rsvp}
+                <input type="checkbox" className={style.cbRound} checked={input.guest.rsvp}
                   onChange={(e) => setInput({
                     ...input,
                     guest: {
@@ -100,10 +93,7 @@ export default function Form() {
                 <span className={style.formSpan}> Sí, obvio! </span>
               </div>
               <div>
-                <input
-                  type="checkbox"
-                  className={style.cbRound}
-                  checked={!input.guest.rsvp}
+                <input type="checkbox" className={style.cbRound} checked={!input.guest.rsvp}
                   onChange={(e) => setInput({
                     ...input,
                     guest: {
@@ -115,19 +105,25 @@ export default function Form() {
                 <span className={style.formSpan}> No, perdón! </span>
               </div>
               <div>
-                <input
-                  type="checkbox"
-                  className={style.cbRound}
-                  checked={input.plusOne?.rsvp}
-                  onChange={(e) => setInput({
-                    ...input,
-                    plusOne: {
-                      ...input.plusOne,
-                      rsvp: e.target.checked,
-                    },
-                  })}
-
-                />
+                {(input.guest.rsvp) ?
+                  (<input type="checkbox" className={style.cbRound} checked={input.plusOne?.rsvp}
+                    onChange={(e) => setInput({
+                      ...input,
+                      plusOne: {
+                        ...input.plusOne,
+                        rsvp: e.target.checked,
+                      },
+                    })} />) : (
+                    <input type="checkbox" className={style.cbRound} checked={input.plusOne?.rsvp}
+                      onChange={(e) => setInput({
+                        ...input,
+                        plusOne: {
+                          ...input.plusOne,
+                          rsvp: e.target.checked,
+                        },
+                      })}
+                      disabled
+                    />)}
                 <span className={style.formSpan}> Plus 1</span>
               </div>
             </div>
@@ -136,100 +132,159 @@ export default function Form() {
                 <div >
                   <h5 className={style.h5Div}>Soy...</h5>
                   <div>
-                    <input
-                      type="checkbox"
-                      className={style.cbRound}
-                      checked={input.guest.vegan}
-                      onChange={(e) => setInput({
-                        ...input,
-                        guest: {
-                          ...input.guest,
-                          vegan: e.target.checked,
-                        },
-                      })}
-                    />
+                    {(input.guest.rsvp) ? (
+                      <input type="checkbox" className={style.cbRound} checked={input.guest.vegan}
+                        onChange={(e) => setInput({
+                          ...input,
+                          guest: {
+                            ...input.guest,
+                            vegan: e.target.checked,
+                          },
+                        })}
+                      />
+                    ) : (
+                      <input type="checkbox" className={style.cbRound} checked={input.guest.vegan}
+                        onChange={(e) => setInput({
+                          ...input,
+                          guest: {
+                            ...input.guest,
+                            vegan: e.target.checked,
+                          },
+                        })}
+                        disabled
+                      />
+                    )}
+
                     <span className={style.formSpan}> Veganx</span>
                   </div>
                   <div>
-                    <input
-                      type="checkbox"
-                      className={style.cbRound}
-                      checked={input.guest.vegetarian}
-                      onChange={(e) => setInput({
-                        ...input,
-                        guest: {
-                          ...input.guest,
-                          vegetarian: e.target.checked,
-                        },
-                      })}
-
-                    />
+                    {(input.guest.rsvp) ? (
+                      <input type="checkbox" className={style.cbRound} checked={input.guest.vegetarian}
+                        onChange={(e) => setInput({
+                          ...input,
+                          guest: {
+                            ...input.guest,
+                            vegetarian: e.target.checked,
+                          },
+                        })}
+                      />
+                    ) : (
+                      <input type="checkbox" className={style.cbRound} checked={input.guest.vegetarian}
+                        onChange={(e) => setInput({
+                          ...input,
+                          guest: {
+                            ...input.guest,
+                            vegetarian: e.target.checked,
+                          },
+                        })}
+                        disabled
+                      />
+                    )}
                     <span className={style.formSpan}> Vegetarianx</span>
                   </div>
                   <div>
-                    <input
-                      type="checkbox"
-                      className={style.cbRound}
-                      checked={input.guest.pescetarian}
-                      onChange={(e) => setInput({
-                        ...input,
-                        guest: {
-                          ...input.guest,
-                          pescetarian: e.target.checked,
-                        },
-                      })}
+                    {(input.guest.rsvp) ? (
+                      <input type="checkbox" className={style.cbRound} checked={input.guest.pescetarian}
+                        onChange={(e) => setInput({
+                          ...input,
+                          guest: {
+                            ...input.guest,
+                            pescetarian: e.target.checked,
+                          },
+                        })}
 
-                    />
+                      />) : (
+                      <input type="checkbox" className={style.cbRound} checked={input.guest.pescetarian}
+                        onChange={(e) => setInput({
+                          ...input,
+                          guest: {
+                            ...input.guest,
+                            pescetarian: e.target.checked,
+                          },
+                        })}
+                        disabled
+                      />
+                    )}
                     <span className={style.formSpan}> Pesquetarianx</span>
-
                   </div>
                 </div>
               </div>
               <div className={style.plus1Div}>
                 <h5 className={style.h5Div}>Plus 1</h5>
-                <input
-                  type="checkbox"
-                  className={style.cbRound}
-                  checked={input.plusOne?.vegan}
-                  onChange={(e) => setInput({
-                    ...input,
-                    plusOne: {
-                      ...input.plusOne,
-                      vegan: e.target.checked,
-                    },
-                  })}
+                {
+                  (input.plusOne?.rsvp) ? (
+                    <input type="checkbox" className={style.cbRound} checked={input.plusOne?.vegan}
+                      onChange={(e) => setInput({
+                        ...input,
+                        plusOne: {
+                          ...input.plusOne,
+                          vegan: e.target.checked,
+                        },
+                      })}
+                    />) : (
+                    <input type="checkbox" className={style.cbRound} checked={input.plusOne?.vegan}
+                      onChange={(e) => setInput({
+                        ...input,
+                        plusOne: {
+                          ...input.plusOne,
+                          vegan: e.target.checked,
+                        },
+                      })}
+                      disabled
+                    />
+                  )
+                }
 
-                />
                 <span className={style.formSpan}> Veganx</span>
                 <br />
-                <input
-                  type="checkbox"
-                  className={style.cbRound}
-                  checked={input.plusOne?.vegetarian}
-                  onChange={(e) => setInput({
-                    ...input,
-                    plusOne: {
-                      ...input.plusOne,
-                      vegetarian: e.target.checked,
-                    },
-                  })}
-
-                />
+                {
+                  (input.plusOne?.rsvp) ? (
+                    <input type="checkbox" className={style.cbRound} checked={input.plusOne?.vegetarian}
+                      onChange={(e) => setInput({
+                        ...input,
+                        plusOne: {
+                          ...input.plusOne,
+                          vegetarian: e.target.checked,
+                        },
+                      })}
+                    />) : (
+                    <input type="checkbox" className={style.cbRound} checked={input.plusOne?.vegetarian}
+                      onChange={(e) => setInput({
+                        ...input,
+                        plusOne: {
+                          ...input.plusOne,
+                          vegetarian: e.target.checked,
+                        },
+                      })}
+                      disabled
+                    />
+                  )
+                }
                 <span className={style.formSpan}> Vegetarianx</span>
                 <br />
-                <input
-                  type="checkbox"
-                  className={style.cbRound}
-                  checked={input.plusOne?.pescetarian}
-                  onChange={(e) => setInput({
-                    ...input,
-                    plusOne: {
-                      ...input.plusOne,
-                      pescetarian: e.target.checked,
-                    },
-                  })}
-
-                />
+                {
+                  (input.plusOne?.rsvp) ? (
+                    <input type="checkbox" className={style.cbRound} checked={input.plusOne?.pescetarian}
+                      onChange={(e) => setInput({
+                        ...input,
+                        plusOne: {
+                          ...input.plusOne,
+                          pescetarian: e.target.checked,
+                        },
+                      })}
+                    />) : (
+                    <input type="checkbox" className={style.cbRound} checked={input.plusOne?.pescetarian}
+                      onChange={(e) => setInput({
+                        ...input,
+                        plusOne: {
+                          ...input.plusOne,
+                          pescetarian: e.target.checked,
+                        },
+                      })}
+                      disabled
+                    />
+                  )
+                }
                 <span className={style.formSpan}> Pesquetarianx</span>
               </div>
             </div>
