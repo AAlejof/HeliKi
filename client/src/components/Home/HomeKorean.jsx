@@ -1,7 +1,7 @@
 import style from './Home.module.css';
 import image from '../../assets/heliki.gif';
 import { Link } from 'react-router-dom';
-import Form from '../Form/Form';
+import FormKorean from '../Form/FormKorean';
 
 const Home = () => {
     return (
@@ -42,7 +42,7 @@ const Home = () => {
                 </Link>
             </div>
             <div className={style.eventsDiv}>
-                <Form />
+                <FormKorean/>
             </div>
         </>
     )
