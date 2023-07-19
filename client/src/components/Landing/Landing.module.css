@@ -22,6 +22,7 @@
 
 a:link {
 	text-decoration: none;
+	color: #4e4e4e;
 }
 
 a:visited {
@@ -31,10 +32,12 @@ a:visited {
 
 a:hover {
 	text-decoration: none;
+	color: #4e4e4e;
 }
 
 a:active {
 	text-decoration: none;
+	color: #4e4e4e;
 }
 
 /* ---------MOBILE--------- */
@@ -62,6 +65,7 @@ a:active {
 
 	a:link {
 		text-decoration: none;
+		color: #4e4e4e;
 	}
 
 	a:visited {
@@ -71,9 +75,11 @@ a:active {
 
 	a:hover {
 		text-decoration: none;
+		color: #4e4e4e;
 	}
 
 	a:active {
 		text-decoration: none;
+		color: #4e4e4e;
 	}
 }
