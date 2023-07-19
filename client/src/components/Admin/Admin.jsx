@@ -8,7 +8,7 @@ const Admin = () => {
 
     useEffect(() => {
         async function getGuests() {
-            const response = await fetch(`https://heli-ki.vercel.app/guests/`);
+            const response = await fetch(`https://heli-ki-api.vercel.app/guests`);
 
             if (!response.ok) {
                 const message = `An error occurred: ${response.statusText}`;
