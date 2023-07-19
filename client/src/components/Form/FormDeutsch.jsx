@@ -29,7 +29,7 @@ export default function FormDeutsch() {
             guestData.plusOne = input.plusOne;
         }
         try {
-            const response = await fetch('https://heli-ki.vercel.app/guests', {
+            const response = await fetch('https://heli-ki-api.vercel.app/guests', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
