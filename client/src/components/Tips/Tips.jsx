@@ -119,7 +119,7 @@ const Tips = () => {
 						</div>
 						<div className={style.hoodsDiv}>
 							<h5>San Telmo:</h5>
-							<p>Ein Stadtteil voller Kunst, Kultur und Antiquitätenläden.</p>
+							<p>Ein alter Stadtteil voller Kunst, Kultur und Antiquitätenläden.</p>
 							<h6>UNSERE TIPPS:</h6>
 							<ul>
 								<li>Feria de San Telmo (am Wochenende)</li>
@@ -164,7 +164,7 @@ const Tips = () => {
 				{(showSA === true) ?
 					<div className={style.travelDiv}>
 						<p>Reisetipps für Argentinien:</p>
-						<div>
+						<div className={style.travelDiv}>
 							<h5>Süden</h5>
 							<ul>
 								<li>Bariloche - Berge und Seen</li>
@@ -173,7 +173,7 @@ const Tips = () => {
 								<li>Tierra del Fuego - Das Ende der Welt</li>
 							</ul>
 						</div>
-						<div>
+						<div className={style.travelDiv}>
 							<h5>Norden</h5>
 							<ul>
 								<li>Quebrada de Humahuaca und Cerro de los Siete Colores (Rainbow Mountains)</li>
@@ -182,20 +182,20 @@ const Tips = () => {
 								<li>Valle de la luna in San Juan (Tal des Mondes)</li>
 							</ul>
 						</div>
-						<div>
+						<div className={style.travelDiv}>
 							<h5>Iguazu</h5>
 							<p>Wasserfälle und Dschungel<br /> Tag 1. Brasilianische Seite <br /> Tag 2. Argentinische Seite + Bootstour <br />
 								Vergiss beim Grenzübergang nicht deinen Reisepass. Am besten in einer wasserdichten Hülle. <br />Dreiländereck: Argentinien, Brasilien, Paraguay</p>
 						</div>
-						<div>
+						<div className={style.travelDiv}>
 							<h5>Mendoza</h5>
 							<p> Weingüter am Fuße der Anden.</p>
 						</div>
-						<div>
+						<div className={style.travelDiv}>
 							<h5>Córdoba</h5>
 							<p>Die zweitgrößte Stadt Argentiniens, umgeben von einer schönen Berg- und Seenlandschaft.</p>
 						</div>
-						<p>…oder besuche die schönen Nachbarländer Argentiniens. Zum Beispiel mit einem Bootstrip nach Uruguay, ein kurzer Flug an die Stände Brasiliens, oder in die Berge nach Chile. <br /><br />Viel Spaß & buen viaje</p>
+						<p>Viel Spaß & buen viaje :)</p>
 					</div>
 					: null}
 			</div>
