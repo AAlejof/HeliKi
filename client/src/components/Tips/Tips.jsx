@@ -162,7 +162,7 @@ const Tips = () => {
 					</p>
 				</div>
 				{(showSA === true) ?
-					<div className={style.travelDiv}>
+					<div className={style.travelAdvDiv}>
 						<p>Reisetipps für Argentinien:</p>
 						<div className={style.travelDiv}>
 							<h5>Süden</h5>
@@ -195,7 +195,8 @@ const Tips = () => {
 							<h5>Córdoba</h5>
 							<p>Die zweitgrößte Stadt Argentiniens, umgeben von einer schönen Berg- und Seenlandschaft.</p>
 						</div>
-						<p>Viel Spaß & buen viaje :)</p>
+						<br />
+						<p><b>Viel Spaß & buen viaje :)</b></p>
 					</div>
 					: null}
 			</div>

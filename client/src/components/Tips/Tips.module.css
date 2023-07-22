@@ -163,6 +163,14 @@
 	margin: 0;
 }
 
+.travelAdvDiv {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
 .travelDiv {
 	display: flex;
 	flex-direction: column;
