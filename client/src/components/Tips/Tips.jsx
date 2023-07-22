@@ -1,7 +1,7 @@
 import style from './Tips.module.css';
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
-import image from '../../assets/map.svg' 
+import image from '../../assets/map.svg'
 
 
 const Tips = () => {
@@ -33,7 +33,7 @@ const Tips = () => {
 
 				<div>
 					<div className={style.tipsDiv}>
-						<p className={style.h3Div} onClick={toggleTips}>SECURITY ADVICES </p>
+						<p className={style.h3Div} onClick={toggleTips}>SICHERHEITSHINWEISE</p>
 						<p className={style.faDiv} onClick={toggleTips}>
 							{(showTips === false) ? (<i class="fa-solid fa-plus fa-xl"></i>)
 								: (<i class="fa-solid fa-chevron-up fa-xl"></i>)}
@@ -43,8 +43,9 @@ const Tips = () => {
 						<div className={style.secAdvDiv}>
 							<ol>
 								<li>Lass deine Wertsachen / Rucksack / Handtasche auch in Bars und Restaurants nicht unbeaufsichtigt.</li>
-								<li>Nutze dein Handy am besten nicht an Straßenecken (Kurven) oder in der U-Bahn</li>
+								<li>Nutze dein Handy am besten nicht an Straßenecken oder in der U-Bahn.</li>
 								<li>Vermeide es, dich nachts in Seitenstraßen aufzuhalten.</li>
+								<li>Verlasse das Taxi immer zur Seite des Bürgersteigs.</li>
 							</ol>
 						</div>
 						: null}
@@ -60,16 +61,16 @@ const Tips = () => {
 					<div className={style.secAdvDiv}>
 						<ul>
 							<li><b>Uber</b></li>
-							<li><b>Taxi</b>: Nur mit Bargeld. Nenne immer die Straßenecke zu der du möchtest (2 Straßennamen)</li>
-							<li><b>SUBE</b> (Transportkarte)</li>
-							<li>Du erhältst eine SUBE-Karte (wiederaufladbare ÖPNV-Karte)im Kiosk oder in den U-Bahn-Stationen. Damit kannst du alle Busse und die U-Bahn nutzen.</li>
+							<li><b>Taxi</b>: Nur mit Bargeld. Nenne immer die Straßenecke (2 Straßennamen).</li>
+							<li><b>SUBE (ÖPNV-Karte):</b></li>
+							<li>Du erhältst eine SUBE-Karte im Kiosk oder in den U-Bahn Stationen. Mit dieser Karte kannst du alle Busse, sowie die U-Bahn nutzen.</li>
 							<li><b>Subte ( U-Bahn):</b> Das U-Bahn Netz ist jedoch etwas begrenzt. Nutze sie am besten nur, wenn sich eine Haltestelle in nächster Nähe befindet.</li>
 							<li><b>Bus:</b> Wenn du den Bus mit der richtigen Busnummer siehst, musst du ihn an der Bushaltestelle per Handzeichen zu dir rufen. Manchmal sind dort jedoch auch längere Warteschlangen.</li>
 						</ul>
 					</div>
 					: null}
 				<div className={style.tipsDiv}>
-					<p className={style.h3Div} onClick={toggleMap}>STANDTPLAN VON BUENOS AIRES</p>
+					<p className={style.h3Div} onClick={toggleMap}>STADTPLAN VON BUENOS AIRES</p>
 					<p className={style.faDiv} onClick={toggleMap}>
 						{(showMap === false) ? (<i class="fa-solid fa-plus fa-xl"></i>)
 							: (<i class="fa-solid fa-chevron-up fa-xl"></i>)}
@@ -77,11 +78,11 @@ const Tips = () => {
 				</div>
 				{(showMap === true) ?
 					<div className={style.mapDiv}>
-						<p className={style.mapP}>Hier sind für dich ein paar Tipps, was du in den unterschiedlichen Stadtteilen unternehmen kannst.</p>
+						<p className={style.mapP}>Wir haben ein paar Tipps für dich, was du in den unterschiedlichen Stadtteilen unternehmen kannst.</p>
 						<Link to='https://mapa.buenosaires.gob.ar/mapas/?lat=-34.623744&lng=-58.434734&zl=13&modo=transporte' >
 							<button className={style.smallButton}><i class="fa-solid fa-map-location-dot fa-xl"></i></button>
 						</Link>
-						<img className={style.map} src= {image} alt="bsasMap" />
+						<img className={style.map} src={image} alt="bsasMap" />
 						<div className={style.hoodsDiv}>
 							<h5>Palermo:</h5>
 							<p>Das größte und gleichzeitig auch das modernste Viertel in Buenos Aires. Besonders zum Ausgehen ist Palermo perfekt.</p>
@@ -94,7 +95,7 @@ const Tips = () => {
 						</div>
 						<div className={style.hoodsDiv}>
 							<h5>Recoleta:</h5>
-							<p>Hier findet ihr eine menge Kunst & Kultur.</p>
+							<p>Ein Stadtteil voller Kunst und Kultur</p>
 							<h6>UNSERE TIPPS:</h6>
 							<ul>
 								<li>Cementerio de Recoleta</li>
@@ -183,13 +184,18 @@ const Tips = () => {
 						</div>
 						<div>
 							<h5>Iguazu</h5>
-							<p>Wasserfälle und Jungle <br /> Tipp: Tag 1 brasilianische Seite <br /> Tag 2 argentinische Seite + Bootstour (vergiss nicht deinen Reisepass, wenn du über die Grenze fährst. Am besten in einer wasserdichten Hülle) <br />Dreiländereck: Argentinien, Brasilien, Paraguay</p>
+							<p>Wasserfälle und Dschungel<br /> Tag 1. Brasilianische Seite <br /> Tag 2. Argentinische Seite + Bootstour <br />
+								Vergiss beim Grenzübergang nicht deinen Reisepass. Am besten in einer wasserdichten Hülle. <br />Dreiländereck: Argentinien, Brasilien, Paraguay</p>
 						</div>
 						<div>
-							<p>Mendoza: Weingüter am Fuße der Anden.</p>
-							<p>Córdoba: Die zweit größte Stadt Argentiniens, umgeben von einer Berg- und Seenlandschaft.</p>
-							<p>…oder besuche die schönen Nachbarländer Argentiniens. Zum Beispiel mit einem Bootstrip nach Uruguay, ein kurzer Flug an die Stände Brasiliens, oder in die Berge nach Chile. <br /><br />Viel Spaß & buen viaje</p>
+							<h5>Mendoza</h5>
+							<p> Weingüter am Fuße der Anden.</p>
 						</div>
+						<div>
+							<h5>Córdoba</h5>
+							<p>Die zweitgrößte Stadt Argentiniens, umgeben von einer schönen Berg- und Seenlandschaft.</p>
+						</div>
+						<p>…oder besuche die schönen Nachbarländer Argentiniens. Zum Beispiel mit einem Bootstrip nach Uruguay, ein kurzer Flug an die Stände Brasiliens, oder in die Berge nach Chile. <br /><br />Viel Spaß & buen viaje</p>
 					</div>
 					: null}
 			</div>

@@ -65,8 +65,8 @@ export default function FormDeutsch() {
             <div>
                 <div className={style.rsvpDiv}>
                     <h3 className={style.h3Div}>RSVP</h3>
-                    <p className={style.pPlease} >Für unsere Planung möchten wir euch bitte, die folgenden Felder auszufüllen und abzusenden.
-                        Bitte gebt uns bis zum …. 18. September Bescheid, ob ihr kommen könnt.</p>
+                    <p className={style.pPlease} >Für unsere Planung möchten wir euch bitten, die folgenden Felder auszufüllen und auf Senden zu klicken. <br /><br />
+                    Bitte gebt uns bis zum 18. September Bescheid, ob ihr kommen könnt.</p>
                     <form className={style.rsvpForm} onSubmit={handleSubmit}>
                         <div>
                             <input type="text" placeholder="Name" className={style.inputPill} value={input.guest.name}
@@ -155,7 +155,7 @@ export default function FormDeutsch() {
                                                 disabled
                                             />
                                         )}
-                                        <span className={style.formSpan}> Vegan</span>
+                                        <span className={style.formSpan}> vegan</span>
                                     </div>
                                     <div>
                                         {(input.guest.rsvp) ? (
@@ -180,7 +180,7 @@ export default function FormDeutsch() {
                                                 disabled
                                             />
                                         )}
-                                        <span className={style.formSpan}> Vegetarisch</span>
+                                        <span className={style.formSpan}> vegetarisch</span>
                                     </div>
                                     <div>
                                         {(input.guest.rsvp) ? (
@@ -205,7 +205,7 @@ export default function FormDeutsch() {
                                                 disabled
                                             />
                                         )}
-                                        <span className={style.formSpan}> Pesquetarier</span>
+                                        <span className={style.formSpan}> pescetarisch</span>
 
                                     </div>
                                 </div>
@@ -235,7 +235,7 @@ export default function FormDeutsch() {
                                         />
                                     )
                                 }
-                                <span className={style.formSpan}> Vegan</span>
+                                <span className={style.formSpan}> vegan</span>
                                 <br />
                                 {
                                     (input.plusOne?.rsvp) ? (
@@ -260,7 +260,7 @@ export default function FormDeutsch() {
                                         />
                                     )
                                 }
-                                <span className={style.formSpan}> Vegetarisch</span>
+                                <span className={style.formSpan}> vegetarisch</span>
                                 <br />
                                 {
                                     (input.plusOne?.rsvp) ? (
@@ -285,14 +285,14 @@ export default function FormDeutsch() {
                                         />
                                     )
                                 }
-                                <span className={style.formSpan}> Pesquetarier</span>
+                                <span className={style.formSpan}> pescetarisch</span>
                             </div>
                         </div>
                         <div>
-                            <h4 className={style.h4Div}>ALLERGIE</h4>
+                            <h4 className={style.h4Div}>ALLERGIEN</h4>
                             <input
                                 type="text"
-                                placeholder="Ich/plus 1 bin allergisch auf…"
+                                placeholder="Ich bin / plus 1 ist allergisch auf..."
                                 className={style.inputPill}
                                 value={input.guest.alergies}
                                 onChange={(e) => setInput({

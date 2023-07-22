@@ -20,7 +20,7 @@ const HomeDeutsch = () => {
         </div>
         <div className={style.wellcomeDiv}>
             <h2 className={style.h2Div}>SHARE <br/>LOVE</h2>
-            <p className={style.pWellcomeDiv}>Hola! Von ganzem Herzen und überglücklich, laden wir euch zu unserer Hochzeit nach Buenos Aires ein.
+            <p className={style.pWellcomeDiv}>Hola! <br /> Hiermit laden wir euch ganz herzlich zu unserer Hochzeit in Buenos Aires ein.
                 <br/>Wir freuen uns auf euch!
                 <br/>Heli & Kiki
             </p>
@@ -34,7 +34,7 @@ const HomeDeutsch = () => {
         </div>
         <div className={style.eventsDiv}>
             <h3 className={style.h3Div}>FEIER</h3>
-            <p  className={style.pEventsDiv}>Samstag <br/> 18.11.2023 <br/><br/>19:00 Uhr <br/><br/>Lowlands <br/>( Adresse: Blanco Encalada 1201,<br/> Belgrano, CABA)</p>
+            <p  className={style.pEventsDiv}>Samstag <br/> 18.11.2023 <br/><br/>19:00 Uhr <br/><br/>Lowlands <br/>(Adresse: Blanco Encalada 1201,<br/> Belgrano, CABA)</p>
             <Link to='https://goo.gl/maps/XbMraPt6wvK125gz8'>
                 <button className={style.smallButton}><i class="fa-solid fa-map-location-dot fa-xl"></i></button>
             </Link>
