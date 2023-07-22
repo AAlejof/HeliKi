@@ -7,7 +7,7 @@ export default function FormDeutsch() {
     const [input, setInput] = useState({
         guest: {
             name: '',
-            rsvp: false,
+            rsvp: true,
             vegan: false,
             vegetarian: false,
             pescetarian: false,
