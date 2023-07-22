@@ -155,7 +155,7 @@ export default function FormDeutsch() {
                                                 disabled
                                             />
                                         )}
-                                        <span className={style.formSpan}> vegan</span>
+                                        <span className={style.formSpan}> Veganer:in</span>
                                     </div>
                                     <div>
                                         {(input.guest.rsvp) ? (
@@ -180,7 +180,7 @@ export default function FormDeutsch() {
                                                 disabled
                                             />
                                         )}
-                                        <span className={style.formSpan}> vegetarisch</span>
+                                        <span className={style.formSpan}> Vegetarier:in</span>
                                     </div>
                                     <div>
                                         {(input.guest.rsvp) ? (
@@ -205,7 +205,7 @@ export default function FormDeutsch() {
                                                 disabled
                                             />
                                         )}
-                                        <span className={style.formSpan}> pescetarisch</span>
+                                        <span className={style.formSpan}> Pescetarier:in</span>
 
                                     </div>
                                 </div>
@@ -235,7 +235,7 @@ export default function FormDeutsch() {
                                         />
                                     )
                                 }
-                                <span className={style.formSpan}> vegan</span>
+                                <span className={style.formSpan}> Veganer:in</span>
                                 <br />
                                 {
                                     (input.plusOne?.rsvp) ? (
@@ -260,7 +260,7 @@ export default function FormDeutsch() {
                                         />
                                     )
                                 }
-                                <span className={style.formSpan}> vegetarisch</span>
+                                <span className={style.formSpan}> Vegetarier:in</span>
                                 <br />
                                 {
                                     (input.plusOne?.rsvp) ? (
@@ -285,7 +285,7 @@ export default function FormDeutsch() {
                                         />
                                     )
                                 }
-                                <span className={style.formSpan}> pescetarisch</span>
+                                <span className={style.formSpan}> Pescetarier:in</span>
                             </div>
                         </div>
                         <div>

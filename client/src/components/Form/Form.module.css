@@ -38,9 +38,9 @@
 	border-radius: 50px;
 	border-style: none;
 	padding-top: 14px;
-	padding-left: 25px;
+	padding-left: 22px;
 	padding-bottom: 14px;
-	padding-right: 25px;
+	padding-right: 22px;
 	cursor: pointer;
 }
 
@@ -202,7 +202,7 @@
 		font-family: 'Source Sans Pro';
 		font-style: normal;
 		font-weight: 400;
-		font-size: 17px;
+		font-size: 16px;
 		line-height: 20px;
 		text-align: left;
 		color: #9e8d8d;
@@ -210,9 +210,9 @@
 		border-radius: 50px;
 		border-style: none;
 		padding-top: 14px;
-		padding-left: 25px;
+		padding-left: 22px;
 		padding-bottom: 14px;
-		padding-right: 25px;
+		padding-right: 22px;
 		cursor: text;
 	}
 
