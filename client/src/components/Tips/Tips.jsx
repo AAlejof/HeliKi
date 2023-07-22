@@ -62,8 +62,7 @@ const Tips = () => {
 						<ul>
 							<li><b>Uber</b></li>
 							<li><b>Taxi</b>: Nur mit Bargeld. Nenne immer die Straßenecke (2 Straßennamen).</li>
-							<li><b>SUBE (ÖPNV-Karte):</b></li>
-							<li>Du erhältst eine SUBE-Karte im Kiosk oder in den U-Bahn Stationen. Mit dieser Karte kannst du alle Busse, sowie die U-Bahn nutzen.</li>
+							<li><b>SUBE (ÖPNV-Karte):</b> <br />Du erhältst eine SUBE-Karte im Kiosk oder in den U-Bahn Stationen. Mit dieser Karte kannst du alle Busse, sowie die U-Bahn nutzen.</li>
 							<li><b>Subte ( U-Bahn):</b> Das U-Bahn Netz ist jedoch etwas begrenzt. Nutze sie am besten nur, wenn sich eine Haltestelle in nächster Nähe befindet.</li>
 							<li><b>Bus:</b> Wenn du den Bus mit der richtigen Busnummer siehst, musst du ihn an der Bushaltestelle per Handzeichen zu dir rufen. Manchmal sind dort jedoch auch längere Warteschlangen.</li>
 						</ul>
@@ -185,7 +184,7 @@ const Tips = () => {
 						<div className={style.travelDiv}>
 							<h5>Iguazu</h5>
 							<p>Wasserfälle und Dschungel<br /> Tag 1. Brasilianische Seite <br /> Tag 2. Argentinische Seite + Bootstour <br />
-								Vergiss beim Grenzübergang nicht deinen Reisepass. Am besten in einer wasserdichten Hülle. <br />Dreiländereck: Argentinien, Brasilien, Paraguay</p>
+							Vergiss nicht deinen Reisepass beim Grenzübergang. Am besten in einer wasserdichten Hülle. <br />Dreiländereck: Argentinien, Brasilien, Paraguay</p>
 						</div>
 						<div className={style.travelDiv}>
 							<h5>Mendoza</h5>
