@@ -69,7 +69,7 @@ export default function FormDeutsch() {
                         Bitte gebt uns bis zum …. 18. September Bescheid, ob ihr kommen könnt.</p>
                     <form className={style.rsvpForm} onSubmit={handleSubmit}>
                         <div>
-                            <input type="text" placeholder="Nombre/s" className={style.inputPill} value={input.guest.name}
+                            <input type="text" placeholder="Name" className={style.inputPill} value={input.guest.name}
                                 onChange={(e) => setInput({
                                     ...input,
                                     guest: {
@@ -292,7 +292,7 @@ export default function FormDeutsch() {
                             <h4 className={style.h4Div}>ALLERGIE</h4>
                             <input
                                 type="text"
-                                placeholder="Tengo/tenemos alergia a..."
+                                placeholder="Ich/plus 1 bin allergisch auf…"
                                 className={style.inputPill}
                                 value={input.guest.alergies}
                                 onChange={(e) => setInput({
