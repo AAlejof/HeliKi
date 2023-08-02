@@ -99,6 +99,10 @@
 	cursor: pointer;
 }
 
+.smallButton:active {
+	transform: scale(0.95);
+}
+
 .cbRound {
 	width: 1.3em;
 	height: 1.3em;
