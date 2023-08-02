@@ -6,57 +6,74 @@ import swal from "sweetalert";
 export default function FormDeutsch() {
     const [input, setInput] = useState({
         guest: {
-            name: '',
-            rsvp: true,
+          name: '',
+          rsvp: true,
+          vegan: false,
+          vegetarian: false,
+          pescetarian: false,
+          alergies: '',
+          plusOne: {
+            rsvp: false,
             vegan: false,
             vegetarian: false,
             pescetarian: false,
-            alergies: '',
-            plusOne: {
-                rsvp: false,
-                vegan: false,
-                vegetarian: false,
-                pescetarian: false,
-            },
+          },
         },
-    });
-
-
-    const handleSubmit = async (e) => {
+      });
+    
+      const handleSubmit = async (e) => {
         e.preventDefault();
         const guestData = input.guest;
         if (input.plusOne) {
-            guestData.plusOne = input.plusOne;
+          guestData.plusOne = input.plusOne;
         }
         try {
-            const response = await fetch('https://heli-ki-api.vercel.app/guests', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(guestData),
+          const response = await fetch('https://heli-ki-api.vercel.app/guests', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(guestData),
+          });
+          if (response.ok) {
+            console.log('Guest created successfully');
+            swal({
+              icon: 'success',
             });
-            if (response.ok) {
-                console.log('Guest created successfully');
-                swal({
-                    icon: 'success',
-                });
-            } else {
-                console.log('Failed to create guest');
-                swal({
-                    icon: 'warning',
-                });
-            }
+            setInput(initialState);
+          } else {
+            console.log('Failed to create guest');
+            swal({
+              icon: 'warning',
+            });
+          }
         } catch (error) {
-            console.error('Error:', error);
+          console.error('Error:', error);
         }
-    };
-
-    const handleNoName = (e) => {
+      };
+    
+      const handleNoName = (e) => {
         swal({
-            icon: 'warning',
+          icon: 'warning',
         });
-    }
+      };
+    
+      const initialState = {
+        guest: {
+          name: '',
+          rsvp: true,
+          vegan: false,
+          vegetarian: false,
+          pescetarian: false,
+          alergies: '',
+          plusOne: {
+            rsvp: false,
+            vegan: false,
+            vegetarian: false,
+            pescetarian: false,
+          },
+        },
+      };
 
 
 
