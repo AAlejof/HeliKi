@@ -28,14 +28,14 @@ const HomeDeutsch = () => {
         <div className={style.eventsDiv}>
             <h3 className={style.h3Div}>TRAUUNG</h3>
             <p  className={style.pEventsDiv}>Samstag <br/> 18.11.2023 <br/><br/>17:00 Uhr <br/><br/>Iglesia So-Mang <br/>(Adresse: Morón 3744, Floresta, CABA)</p>
-            <Link to='https://goo.gl/maps/BXHWCvkLRu8VpnDf9'>
+            <Link to='https://goo.gl/maps/BXHWCvkLRu8VpnDf9' target="_blank">
                 <button className={style.smallButton}><i class="fa-solid fa-map-location-dot fa-xl"></i></button>
             </Link>
         </div>
         <div className={style.eventsDiv}>
             <h3 className={style.h3Div}>FEIER</h3>
             <p  className={style.pEventsDiv}>Samstag <br/> 18.11.2023 <br/><br/>19:00 Uhr <br/><br/>Lowlands <br/>(Adresse: Blanco Encalada 1201,<br/> Belgrano, CABA)</p>
-            <Link to='https://goo.gl/maps/XbMraPt6wvK125gz8'>
+            <Link to='https://goo.gl/maps/XbMraPt6wvK125gz8' target="_blank">
                 <button className={style.smallButton}><i class="fa-solid fa-map-location-dot fa-xl"></i></button>
             </Link>
         </div>
